@@ -1,0 +1,562 @@
+################################################################################
+SEED: 1029
+batch_size: 4
+epochs: 600
+lr_scheduler: cosine
+resume_ind: 0
+resume_ckpt: 
+snr: 35
+lr: 0.0001
+step_size: 200
+workers: 4
+eval_step: 2
+finetuning_step: 300
+weight_decay: 0
+crop_size: 128
+image_size: 256
+bands: 172
+msi_bands: 4
+mis_pix: 0
+mixed_align_opt: 0
+joint_loss: 1
+network_mode: 2
+num_base_chs: 172
+num_blocks: 6
+num_agg_feat: 43
+groups: 1
+root: /work/u1657859/DCSNv2/Data
+val_file: ./val.txt
+train_file: ./train.txt
+prefix: KD_QRCODE
+device: cuda:0
+DEBUG: False
+gpus: 1
+################################################################################
+start training
+################################################################################
+#training samples is 1678 and validation samples is 200
+T : [epoch: 0] Loss: 0.759, Loss-SAM: 0.099, Loss-BWS: 0.014, val-rmse: 167.027, val-SAM: 8.844, val-PSNR: 20.498, val-ERGAS: 19.731, Inference time: 23.312351 ms, Optim time: 321.516447, lr: 0.000100
+S : [epoch: 0] Loss: 0.851, Loss-SAM: 0.103, Loss-BWS: 0.015, val-rmse: 166.505, val-SAM: 8.151, val-PSNR: 20.285, val-ERGAS: 21.662, Inference time: 6.462630 ms, Optim time: 132.854188, lr: 0.000100
+ 
+T : [epoch: 2] Loss: 0.099, Loss-SAM: 0.045, Loss-BWS: 0.002, val-rmse: 134.937, val-SAM: 7.172, val-PSNR: 22.157, val-ERGAS: 16.992, Inference time: 2.523266 ms, Optim time: 296.203391, lr: 0.000100
+S : [epoch: 2] Loss: 0.106, Loss-SAM: 0.044, Loss-BWS: 0.002, val-rmse: 128.482, val-SAM: 7.634, val-PSNR: 22.877, val-ERGAS: 14.042, Inference time: 1.646755 ms, Optim time: 131.675206, lr: 0.000100
+ 
+T : [epoch: 4] Loss: 0.061, Loss-SAM: 0.035, Loss-BWS: 0.001, val-rmse: 83.670, val-SAM: 4.987, val-PSNR: 26.280, val-ERGAS: 11.176, Inference time: 2.537748 ms, Optim time: 296.738338, lr: 0.000100
+S : [epoch: 4] Loss: 0.059, Loss-SAM: 0.034, Loss-BWS: 0.001, val-rmse: 90.129, val-SAM: 5.576, val-PSNR: 25.510, val-ERGAS: 10.999, Inference time: 1.666181 ms, Optim time: 131.719030, lr: 0.000100
+ 
+T : [epoch: 6] Loss: 0.066, Loss-SAM: 0.032, Loss-BWS: 0.001, val-rmse: 84.823, val-SAM: 5.445, val-PSNR: 26.194, val-ERGAS: 10.268, Inference time: 2.514415 ms, Optim time: 297.177395, lr: 0.000100
+S : [epoch: 6] Loss: 0.054, Loss-SAM: 0.031, Loss-BWS: 0.001, val-rmse: 79.935, val-SAM: 4.786, val-PSNR: 26.352, val-ERGAS: 11.593, Inference time: 1.646664 ms, Optim time: 131.815390, lr: 0.000100
+ 
+T : [epoch: 8] Loss: 0.046, Loss-SAM: 0.029, Loss-BWS: 0.001, val-rmse: 126.578, val-SAM: 9.730, val-PSNR: 23.875, val-ERGAS: 29.628, Inference time: 2.531873 ms, Optim time: 297.167186, lr: 0.000100
+S : [epoch: 8] Loss: 0.048, Loss-SAM: 0.029, Loss-BWS: 0.001, val-rmse: 71.969, val-SAM: 4.334, val-PSNR: 27.427, val-ERGAS: 8.922, Inference time: 1.597168 ms, Optim time: 131.804651, lr: 0.000100
+ 
+T : [epoch: 10] Loss: 0.038, Loss-SAM: 0.026, Loss-BWS: 0.001, val-rmse: 94.295, val-SAM: 6.787, val-PSNR: 25.684, val-ERGAS: 11.403, Inference time: 2.505482 ms, Optim time: 297.156943, lr: 0.000100
+S : [epoch: 10] Loss: 0.044, Loss-SAM: 0.027, Loss-BWS: 0.001, val-rmse: 101.923, val-SAM: 6.908, val-PSNR: 24.753, val-ERGAS: 14.562, Inference time: 1.663315 ms, Optim time: 131.892933, lr: 0.000100
+ 
+T : [epoch: 12] Loss: 0.038, Loss-SAM: 0.026, Loss-BWS: 0.001, val-rmse: 99.658, val-SAM: 5.658, val-PSNR: 24.979, val-ERGAS: 15.748, Inference time: 2.549669 ms, Optim time: 297.067725, lr: 0.000100
+S : [epoch: 12] Loss: 0.037, Loss-SAM: 0.026, Loss-BWS: 0.001, val-rmse: 122.393, val-SAM: 7.164, val-PSNR: 23.219, val-ERGAS: 16.000, Inference time: 1.596640 ms, Optim time: 131.853054, lr: 0.000100
+ 
+T : [epoch: 14] Loss: 0.035, Loss-SAM: 0.025, Loss-BWS: 0.001, val-rmse: 60.709, val-SAM: 3.771, val-PSNR: 28.877, val-ERGAS: 8.061, Inference time: 2.505572 ms, Optim time: 296.719934, lr: 0.000100
+S : [epoch: 14] Loss: 0.041, Loss-SAM: 0.026, Loss-BWS: 0.001, val-rmse: 77.981, val-SAM: 4.834, val-PSNR: 26.764, val-ERGAS: 14.229, Inference time: 1.641146 ms, Optim time: 131.714388, lr: 0.000100
+ 
+T : [epoch: 16] Loss: 0.033, Loss-SAM: 0.024, Loss-BWS: 0.001, val-rmse: 61.377, val-SAM: 3.781, val-PSNR: 28.905, val-ERGAS: 7.410, Inference time: 2.552859 ms, Optim time: 296.544828, lr: 0.000100
+S : [epoch: 16] Loss: 0.031, Loss-SAM: 0.024, Loss-BWS: 0.001, val-rmse: 61.440, val-SAM: 4.015, val-PSNR: 28.645, val-ERGAS: 7.961, Inference time: 1.640767 ms, Optim time: 131.815081, lr: 0.000100
+ 
+T : [epoch: 18] Loss: 0.032, Loss-SAM: 0.023, Loss-BWS: 0.001, val-rmse: 63.121, val-SAM: 4.269, val-PSNR: 28.707, val-ERGAS: 7.616, Inference time: 2.533838 ms, Optim time: 296.771259, lr: 0.000100
+S : [epoch: 18] Loss: 0.033, Loss-SAM: 0.023, Loss-BWS: 0.001, val-rmse: 65.385, val-SAM: 4.172, val-PSNR: 28.264, val-ERGAS: 7.345, Inference time: 1.609720 ms, Optim time: 131.770906, lr: 0.000100
+ 
+T : [epoch: 20] Loss: 0.024, Loss-SAM: 0.021, Loss-BWS: 0.001, val-rmse: 64.206, val-SAM: 4.255, val-PSNR: 28.276, val-ERGAS: 8.754, Inference time: 2.524751 ms, Optim time: 297.063167, lr: 0.000100
+S : [epoch: 20] Loss: 0.024, Loss-SAM: 0.022, Loss-BWS: 0.001, val-rmse: 57.738, val-SAM: 3.576, val-PSNR: 29.523, val-ERGAS: 6.371, Inference time: 1.587385 ms, Optim time: 131.808772, lr: 0.000100
+ 
+T : [epoch: 22] Loss: 0.030, Loss-SAM: 0.022, Loss-BWS: 0.001, val-rmse: 58.423, val-SAM: 3.507, val-PSNR: 29.995, val-ERGAS: 5.664, Inference time: 2.534534 ms, Optim time: 296.916060, lr: 0.000100
+S : [epoch: 22] Loss: 0.030, Loss-SAM: 0.023, Loss-BWS: 0.001, val-rmse: 62.588, val-SAM: 4.235, val-PSNR: 29.015, val-ERGAS: 8.250, Inference time: 1.627208 ms, Optim time: 131.795379, lr: 0.000100
+ 
+T : [epoch: 24] Loss: 0.025, Loss-SAM: 0.021, Loss-BWS: 0.001, val-rmse: 53.848, val-SAM: 3.602, val-PSNR: 30.103, val-ERGAS: 6.721, Inference time: 2.543222 ms, Optim time: 296.509440, lr: 0.000100
+S : [epoch: 24] Loss: 0.024, Loss-SAM: 0.021, Loss-BWS: 0.001, val-rmse: 60.471, val-SAM: 3.645, val-PSNR: 29.374, val-ERGAS: 7.396, Inference time: 1.676823 ms, Optim time: 131.719435, lr: 0.000100
+ 
+T : [epoch: 26] Loss: 0.031, Loss-SAM: 0.022, Loss-BWS: 0.001, val-rmse: 71.510, val-SAM: 4.774, val-PSNR: 28.359, val-ERGAS: 8.886, Inference time: 2.518556 ms, Optim time: 296.448607, lr: 0.000100
+S : [epoch: 26] Loss: 0.028, Loss-SAM: 0.022, Loss-BWS: 0.001, val-rmse: 82.002, val-SAM: 6.173, val-PSNR: 26.824, val-ERGAS: 16.393, Inference time: 1.611931 ms, Optim time: 131.617781, lr: 0.000100
+ 
+T : [epoch: 28] Loss: 0.022, Loss-SAM: 0.020, Loss-BWS: 0.000, val-rmse: 71.284, val-SAM: 4.654, val-PSNR: 28.645, val-ERGAS: 7.207, Inference time: 2.553697 ms, Optim time: 296.227299, lr: 0.000099
+S : [epoch: 28] Loss: 0.023, Loss-SAM: 0.020, Loss-BWS: 0.001, val-rmse: 60.808, val-SAM: 3.910, val-PSNR: 29.194, val-ERGAS: 9.843, Inference time: 1.591804 ms, Optim time: 131.688586, lr: 0.000099
+ 
+T : [epoch: 30] Loss: 0.024, Loss-SAM: 0.020, Loss-BWS: 0.001, val-rmse: 79.157, val-SAM: 5.406, val-PSNR: 26.625, val-ERGAS: 13.914, Inference time: 2.573481 ms, Optim time: 296.844232, lr: 0.000099
+S : [epoch: 30] Loss: 0.027, Loss-SAM: 0.021, Loss-BWS: 0.001, val-rmse: 54.809, val-SAM: 3.424, val-PSNR: 29.978, val-ERGAS: 6.192, Inference time: 1.677049 ms, Optim time: 131.842056, lr: 0.000099
+ 
+T : [epoch: 32] Loss: 0.020, Loss-SAM: 0.019, Loss-BWS: 0.000, val-rmse: 80.810, val-SAM: 4.833, val-PSNR: 26.708, val-ERGAS: 11.990, Inference time: 2.575794 ms, Optim time: 297.060605, lr: 0.000099
+S : [epoch: 32] Loss: 0.027, Loss-SAM: 0.021, Loss-BWS: 0.001, val-rmse: 57.531, val-SAM: 3.696, val-PSNR: 29.568, val-ERGAS: 5.872, Inference time: 1.666695 ms, Optim time: 131.769573, lr: 0.000099
+ 
+T : [epoch: 34] Loss: 0.020, Loss-SAM: 0.019, Loss-BWS: 0.000, val-rmse: 55.495, val-SAM: 3.320, val-PSNR: 29.979, val-ERGAS: 6.178, Inference time: 2.561387 ms, Optim time: 297.260809, lr: 0.000099
+S : [epoch: 34] Loss: 0.019, Loss-SAM: 0.019, Loss-BWS: 0.000, val-rmse: 55.722, val-SAM: 3.597, val-PSNR: 29.577, val-ERGAS: 7.853, Inference time: 1.593715 ms, Optim time: 131.880532, lr: 0.000099
+ 
+T : [epoch: 36] Loss: 0.020, Loss-SAM: 0.019, Loss-BWS: 0.000, val-rmse: 50.605, val-SAM: 3.201, val-PSNR: 30.968, val-ERGAS: 4.994, Inference time: 2.553760 ms, Optim time: 297.187833, lr: 0.000099
+S : [epoch: 36] Loss: 0.020, Loss-SAM: 0.019, Loss-BWS: 0.000, val-rmse: 59.249, val-SAM: 3.908, val-PSNR: 29.200, val-ERGAS: 7.733, Inference time: 1.697228 ms, Optim time: 131.830213, lr: 0.000099
+ 
+T : [epoch: 38] Loss: 0.021, Loss-SAM: 0.019, Loss-BWS: 0.000, val-rmse: 54.790, val-SAM: 3.652, val-PSNR: 29.959, val-ERGAS: 7.801, Inference time: 2.532907 ms, Optim time: 296.516602, lr: 0.000099
+S : [epoch: 38] Loss: 0.023, Loss-SAM: 0.020, Loss-BWS: 0.001, val-rmse: 61.069, val-SAM: 3.797, val-PSNR: 29.074, val-ERGAS: 7.406, Inference time: 1.690388 ms, Optim time: 131.793221, lr: 0.000099
+ 
+T : [epoch: 40] Loss: 0.018, Loss-SAM: 0.018, Loss-BWS: 0.000, val-rmse: 64.786, val-SAM: 3.997, val-PSNR: 27.975, val-ERGAS: 10.824, Inference time: 2.513051 ms, Optim time: 296.764279, lr: 0.000099
+S : [epoch: 40] Loss: 0.019, Loss-SAM: 0.019, Loss-BWS: 0.000, val-rmse: 76.195, val-SAM: 3.823, val-PSNR: 27.507, val-ERGAS: 8.778, Inference time: 1.660088 ms, Optim time: 131.738451, lr: 0.000099
+ 
+T : [epoch: 42] Loss: 0.018, Loss-SAM: 0.018, Loss-BWS: 0.000, val-rmse: 49.497, val-SAM: 3.064, val-PSNR: 30.965, val-ERGAS: 5.453, Inference time: 2.517924 ms, Optim time: 297.285058, lr: 0.000099
+S : [epoch: 42] Loss: 0.019, Loss-SAM: 0.019, Loss-BWS: 0.000, val-rmse: 55.804, val-SAM: 3.522, val-PSNR: 29.982, val-ERGAS: 5.371, Inference time: 1.593698 ms, Optim time: 131.883606, lr: 0.000099
+ 
+T : [epoch: 44] Loss: 0.020, Loss-SAM: 0.018, Loss-BWS: 0.000, val-rmse: 55.481, val-SAM: 3.571, val-PSNR: 30.341, val-ERGAS: 5.669, Inference time: 2.547055 ms, Optim time: 297.473080, lr: 0.000099
+S : [epoch: 44] Loss: 0.021, Loss-SAM: 0.019, Loss-BWS: 0.001, val-rmse: 60.184, val-SAM: 3.812, val-PSNR: 29.131, val-ERGAS: 8.177, Inference time: 1.599208 ms, Optim time: 131.908927, lr: 0.000099
+ 
+T : [epoch: 46] Loss: 0.020, Loss-SAM: 0.018, Loss-BWS: 0.000, val-rmse: 90.478, val-SAM: 5.392, val-PSNR: 26.006, val-ERGAS: 16.443, Inference time: 2.559097 ms, Optim time: 297.010155, lr: 0.000098
+S : [epoch: 46] Loss: 0.020, Loss-SAM: 0.019, Loss-BWS: 0.001, val-rmse: 69.172, val-SAM: 4.388, val-PSNR: 28.140, val-ERGAS: 8.332, Inference time: 1.616528 ms, Optim time: 131.841631, lr: 0.000098
+ 
+T : [epoch: 48] Loss: 0.018, Loss-SAM: 0.018, Loss-BWS: 0.000, val-rmse: 48.825, val-SAM: 3.055, val-PSNR: 30.749, val-ERGAS: 6.377, Inference time: 2.534882 ms, Optim time: 296.101540, lr: 0.000098
+S : [epoch: 48] Loss: 0.019, Loss-SAM: 0.019, Loss-BWS: 0.000, val-rmse: 48.476, val-SAM: 2.860, val-PSNR: 31.117, val-ERGAS: 4.452, Inference time: 1.604589 ms, Optim time: 131.671995, lr: 0.000098
+ 
+T : [epoch: 50] Loss: 0.017, Loss-SAM: 0.018, Loss-BWS: 0.000, val-rmse: 53.426, val-SAM: 3.109, val-PSNR: 30.018, val-ERGAS: 6.393, Inference time: 2.544409 ms, Optim time: 296.068448, lr: 0.000098
+S : [epoch: 50] Loss: 0.018, Loss-SAM: 0.018, Loss-BWS: 0.000, val-rmse: 48.835, val-SAM: 3.066, val-PSNR: 30.618, val-ERGAS: 6.198, Inference time: 1.671377 ms, Optim time: 131.647461, lr: 0.000098
+ 
+T : [epoch: 52] Loss: 0.016, Loss-SAM: 0.017, Loss-BWS: 0.000, val-rmse: 48.294, val-SAM: 2.734, val-PSNR: 30.645, val-ERGAS: 5.599, Inference time: 2.527802 ms, Optim time: 295.787267, lr: 0.000098
+S : [epoch: 52] Loss: 0.017, Loss-SAM: 0.018, Loss-BWS: 0.000, val-rmse: 46.718, val-SAM: 2.700, val-PSNR: 31.657, val-ERGAS: 4.112, Inference time: 1.613830 ms, Optim time: 131.568456, lr: 0.000098
+ 
+T : [epoch: 54] Loss: 0.021, Loss-SAM: 0.018, Loss-BWS: 0.000, val-rmse: 79.198, val-SAM: 5.040, val-PSNR: 26.482, val-ERGAS: 15.817, Inference time: 2.563486 ms, Optim time: 296.662920, lr: 0.000098
+S : [epoch: 54] Loss: 0.019, Loss-SAM: 0.019, Loss-BWS: 0.000, val-rmse: 55.856, val-SAM: 3.514, val-PSNR: 29.379, val-ERGAS: 8.490, Inference time: 1.600314 ms, Optim time: 131.761928, lr: 0.000098
+ 
+T : [epoch: 56] Loss: 0.019, Loss-SAM: 0.018, Loss-BWS: 0.000, val-rmse: 51.425, val-SAM: 3.144, val-PSNR: 30.455, val-ERGAS: 7.058, Inference time: 2.526062 ms, Optim time: 296.924284, lr: 0.000098
+S : [epoch: 56] Loss: 0.025, Loss-SAM: 0.020, Loss-BWS: 0.001, val-rmse: 50.171, val-SAM: 2.956, val-PSNR: 30.559, val-ERGAS: 6.267, Inference time: 1.632249 ms, Optim time: 131.777199, lr: 0.000098
+ 
+T : [epoch: 58] Loss: 0.018, Loss-SAM: 0.017, Loss-BWS: 0.000, val-rmse: 66.535, val-SAM: 3.784, val-PSNR: 29.009, val-ERGAS: 7.345, Inference time: 2.529429 ms, Optim time: 297.309930, lr: 0.000098
+S : [epoch: 58] Loss: 0.277, Loss-SAM: 0.060, Loss-BWS: 0.009, val-rmse: 119.537, val-SAM: 7.486, val-PSNR: 22.940, val-ERGAS: 16.782, Inference time: 1.678915 ms, Optim time: 131.826937, lr: 0.000098
+ 
+T : [epoch: 60] Loss: 0.019, Loss-SAM: 0.018, Loss-BWS: 0.000, val-rmse: 62.630, val-SAM: 4.038, val-PSNR: 28.981, val-ERGAS: 7.669, Inference time: 2.527035 ms, Optim time: 296.901044, lr: 0.000097
+S : [epoch: 60] Loss: 0.048, Loss-SAM: 0.030, Loss-BWS: 0.001, val-rmse: 73.466, val-SAM: 4.801, val-PSNR: 26.890, val-ERGAS: 10.125, Inference time: 1.640711 ms, Optim time: 131.663757, lr: 0.000097
+ 
+T : [epoch: 62] Loss: 0.015, Loss-SAM: 0.017, Loss-BWS: 0.000, val-rmse: 42.062, val-SAM: 2.478, val-PSNR: 32.559, val-ERGAS: 4.019, Inference time: 2.521936 ms, Optim time: 297.125663, lr: 0.000097
+S : [epoch: 62] Loss: 0.034, Loss-SAM: 0.025, Loss-BWS: 0.001, val-rmse: 65.148, val-SAM: 4.100, val-PSNR: 28.131, val-ERGAS: 8.153, Inference time: 1.683453 ms, Optim time: 131.709289, lr: 0.000097
+ 
+T : [epoch: 64] Loss: 0.019, Loss-SAM: 0.018, Loss-BWS: 0.000, val-rmse: 44.697, val-SAM: 2.576, val-PSNR: 31.599, val-ERGAS: 5.029, Inference time: 2.557796 ms, Optim time: 297.325231, lr: 0.000097
+S : [epoch: 64] Loss: 0.028, Loss-SAM: 0.023, Loss-BWS: 0.001, val-rmse: 73.307, val-SAM: 4.836, val-PSNR: 26.903, val-ERGAS: 11.015, Inference time: 1.649965 ms, Optim time: 131.835521, lr: 0.000097
+ 
+T : [epoch: 66] Loss: 0.014, Loss-SAM: 0.016, Loss-BWS: 0.000, val-rmse: 52.943, val-SAM: 3.606, val-PSNR: 29.899, val-ERGAS: 8.246, Inference time: 2.525899 ms, Optim time: 297.653948, lr: 0.000097
+S : [epoch: 66] Loss: 0.025, Loss-SAM: 0.022, Loss-BWS: 0.001, val-rmse: 67.581, val-SAM: 4.323, val-PSNR: 28.064, val-ERGAS: 7.966, Inference time: 1.612599 ms, Optim time: 131.909687, lr: 0.000097
+ 
+T : [epoch: 68] Loss: 0.014, Loss-SAM: 0.016, Loss-BWS: 0.000, val-rmse: 49.126, val-SAM: 2.997, val-PSNR: 30.376, val-ERGAS: 8.112, Inference time: 2.544203 ms, Optim time: 297.494567, lr: 0.000097
+S : [epoch: 68] Loss: 0.026, Loss-SAM: 0.022, Loss-BWS: 0.001, val-rmse: 61.761, val-SAM: 4.221, val-PSNR: 28.419, val-ERGAS: 9.130, Inference time: 1.713816 ms, Optim time: 131.815512, lr: 0.000097
+ 
+T : [epoch: 70] Loss: 0.017, Loss-SAM: 0.017, Loss-BWS: 0.000, val-rmse: 62.363, val-SAM: 3.539, val-PSNR: 29.384, val-ERGAS: 9.032, Inference time: 2.572062 ms, Optim time: 296.648732, lr: 0.000097
+S : [epoch: 70] Loss: 0.021, Loss-SAM: 0.020, Loss-BWS: 0.000, val-rmse: 55.224, val-SAM: 3.641, val-PSNR: 29.804, val-ERGAS: 5.853, Inference time: 1.676644 ms, Optim time: 131.683593, lr: 0.000097
+ 
+T : [epoch: 72] Loss: 0.015, Loss-SAM: 0.016, Loss-BWS: 0.000, val-rmse: 42.881, val-SAM: 2.572, val-PSNR: 31.643, val-ERGAS: 5.879, Inference time: 2.553169 ms, Optim time: 296.421964, lr: 0.000096
+S : [epoch: 72] Loss: 0.026, Loss-SAM: 0.022, Loss-BWS: 0.001, val-rmse: 52.884, val-SAM: 3.302, val-PSNR: 29.962, val-ERGAS: 5.504, Inference time: 1.621722 ms, Optim time: 131.753722, lr: 0.000096
+ 
+T : [epoch: 74] Loss: 0.014, Loss-SAM: 0.016, Loss-BWS: 0.000, val-rmse: 42.329, val-SAM: 2.458, val-PSNR: 32.315, val-ERGAS: 4.198, Inference time: 2.539047 ms, Optim time: 296.733986, lr: 0.000096
+S : [epoch: 74] Loss: 0.021, Loss-SAM: 0.020, Loss-BWS: 0.001, val-rmse: 48.142, val-SAM: 2.778, val-PSNR: 31.121, val-ERGAS: 5.051, Inference time: 1.603292 ms, Optim time: 131.735719, lr: 0.000096
+ 
+T : [epoch: 76] Loss: 0.018, Loss-SAM: 0.017, Loss-BWS: 0.000, val-rmse: 69.731, val-SAM: 4.721, val-PSNR: 27.689, val-ERGAS: 12.044, Inference time: 2.532197 ms, Optim time: 296.255895, lr: 0.000096
+S : [epoch: 76] Loss: 0.024, Loss-SAM: 0.021, Loss-BWS: 0.001, val-rmse: 61.687, val-SAM: 3.496, val-PSNR: 28.992, val-ERGAS: 6.343, Inference time: 1.671948 ms, Optim time: 131.600291, lr: 0.000096
+ 
+T : [epoch: 78] Loss: 0.014, Loss-SAM: 0.016, Loss-BWS: 0.000, val-rmse: 43.869, val-SAM: 2.386, val-PSNR: 32.098, val-ERGAS: 4.652, Inference time: 2.559292 ms, Optim time: 296.832942, lr: 0.000096
+S : [epoch: 78] Loss: 0.017, Loss-SAM: 0.018, Loss-BWS: 0.000, val-rmse: 48.467, val-SAM: 2.839, val-PSNR: 30.743, val-ERGAS: 5.455, Inference time: 1.631879 ms, Optim time: 131.760308, lr: 0.000096
+ 
+T : [epoch: 80] Loss: 0.014, Loss-SAM: 0.016, Loss-BWS: 0.000, val-rmse: 74.847, val-SAM: 5.132, val-PSNR: 27.511, val-ERGAS: 11.877, Inference time: 2.542112 ms, Optim time: 297.209811, lr: 0.000096
+S : [epoch: 80] Loss: 0.021, Loss-SAM: 0.020, Loss-BWS: 0.001, val-rmse: 56.430, val-SAM: 3.817, val-PSNR: 30.001, val-ERGAS: 6.229, Inference time: 1.600257 ms, Optim time: 131.879916, lr: 0.000096
+ 
+T : [epoch: 82] Loss: 0.013, Loss-SAM: 0.015, Loss-BWS: 0.000, val-rmse: 43.118, val-SAM: 2.466, val-PSNR: 32.141, val-ERGAS: 4.327, Inference time: 2.575399 ms, Optim time: 297.286040, lr: 0.000095
+S : [epoch: 82] Loss: 0.018, Loss-SAM: 0.018, Loss-BWS: 0.000, val-rmse: 44.524, val-SAM: 2.693, val-PSNR: 31.829, val-ERGAS: 4.337, Inference time: 1.606848 ms, Optim time: 131.793878, lr: 0.000095
+ 
+T : [epoch: 84] Loss: 0.012, Loss-SAM: 0.015, Loss-BWS: 0.000, val-rmse: 56.533, val-SAM: 3.462, val-PSNR: 29.596, val-ERGAS: 9.040, Inference time: 2.537460 ms, Optim time: 296.681679, lr: 0.000095
+S : [epoch: 84] Loss: 0.020, Loss-SAM: 0.019, Loss-BWS: 0.000, val-rmse: 55.407, val-SAM: 3.396, val-PSNR: 29.764, val-ERGAS: 7.360, Inference time: 1.668828 ms, Optim time: 131.724385, lr: 0.000095
+ 
+T : [epoch: 86] Loss: 0.013, Loss-SAM: 0.015, Loss-BWS: 0.000, val-rmse: 51.128, val-SAM: 2.882, val-PSNR: 31.417, val-ERGAS: 5.062, Inference time: 2.531532 ms, Optim time: 296.232884, lr: 0.000095
+S : [epoch: 86] Loss: 0.019, Loss-SAM: 0.018, Loss-BWS: 0.000, val-rmse: 57.470, val-SAM: 3.532, val-PSNR: 30.130, val-ERGAS: 5.236, Inference time: 1.692076 ms, Optim time: 131.584953, lr: 0.000095
+ 
+T : [epoch: 88] Loss: 0.014, Loss-SAM: 0.015, Loss-BWS: 0.000, val-rmse: 42.668, val-SAM: 2.701, val-PSNR: 31.991, val-ERGAS: 5.293, Inference time: 2.522354 ms, Optim time: 295.974322, lr: 0.000095
+S : [epoch: 88] Loss: 0.016, Loss-SAM: 0.018, Loss-BWS: 0.000, val-rmse: 46.486, val-SAM: 2.787, val-PSNR: 31.454, val-ERGAS: 4.327, Inference time: 1.664820 ms, Optim time: 131.622999, lr: 0.000095
+ 
+T : [epoch: 90] Loss: 0.013, Loss-SAM: 0.015, Loss-BWS: 0.000, val-rmse: 53.809, val-SAM: 3.180, val-PSNR: 29.591, val-ERGAS: 7.691, Inference time: 2.548500 ms, Optim time: 296.658330, lr: 0.000094
+S : [epoch: 90] Loss: 0.020, Loss-SAM: 0.018, Loss-BWS: 0.001, val-rmse: 58.453, val-SAM: 3.349, val-PSNR: 29.704, val-ERGAS: 6.457, Inference time: 1.711751 ms, Optim time: 131.846293, lr: 0.000094
+ 
+T : [epoch: 92] Loss: 0.012, Loss-SAM: 0.015, Loss-BWS: 0.000, val-rmse: 55.557, val-SAM: 3.881, val-PSNR: 29.751, val-ERGAS: 8.905, Inference time: 2.560064 ms, Optim time: 296.847228, lr: 0.000094
+S : [epoch: 92] Loss: 0.016, Loss-SAM: 0.018, Loss-BWS: 0.000, val-rmse: 47.893, val-SAM: 2.965, val-PSNR: 31.610, val-ERGAS: 4.860, Inference time: 1.625433 ms, Optim time: 131.764861, lr: 0.000094
+ 
+T : [epoch: 94] Loss: 0.013, Loss-SAM: 0.015, Loss-BWS: 0.000, val-rmse: 39.215, val-SAM: 2.314, val-PSNR: 32.664, val-ERGAS: 5.053, Inference time: 2.518247 ms, Optim time: 296.545406, lr: 0.000094
+S : [epoch: 94] Loss: 0.015, Loss-SAM: 0.017, Loss-BWS: 0.000, val-rmse: 47.784, val-SAM: 2.796, val-PSNR: 31.038, val-ERGAS: 5.972, Inference time: 1.611907 ms, Optim time: 131.631338, lr: 0.000094
+ 
+T : [epoch: 96] Loss: 0.017, Loss-SAM: 0.016, Loss-BWS: 0.000, val-rmse: 39.815, val-SAM: 2.396, val-PSNR: 32.850, val-ERGAS: 4.621, Inference time: 2.532190 ms, Optim time: 297.257661, lr: 0.000094
+S : [epoch: 96] Loss: 0.014, Loss-SAM: 0.017, Loss-BWS: 0.000, val-rmse: 43.437, val-SAM: 2.645, val-PSNR: 31.946, val-ERGAS: 4.867, Inference time: 1.644512 ms, Optim time: 131.837321, lr: 0.000094
+ 
+T : [epoch: 98] Loss: 0.013, Loss-SAM: 0.015, Loss-BWS: 0.000, val-rmse: 53.165, val-SAM: 3.369, val-PSNR: 29.543, val-ERGAS: 8.452, Inference time: 2.505996 ms, Optim time: 297.384768, lr: 0.000093
+S : [epoch: 98] Loss: 0.014, Loss-SAM: 0.017, Loss-BWS: 0.000, val-rmse: 44.169, val-SAM: 2.560, val-PSNR: 31.776, val-ERGAS: 4.954, Inference time: 1.632934 ms, Optim time: 131.829540, lr: 0.000093
+ 
+T : [epoch: 100] Loss: 0.011, Loss-SAM: 0.015, Loss-BWS: 0.000, val-rmse: 44.290, val-SAM: 2.695, val-PSNR: 31.743, val-ERGAS: 4.965, Inference time: 2.571585 ms, Optim time: 297.597535, lr: 0.000093
+S : [epoch: 100] Loss: 0.015, Loss-SAM: 0.017, Loss-BWS: 0.000, val-rmse: 51.479, val-SAM: 2.934, val-PSNR: 30.460, val-ERGAS: 5.264, Inference time: 1.647843 ms, Optim time: 131.912512, lr: 0.000093
+ 
+T : [epoch: 102] Loss: 0.011, Loss-SAM: 0.014, Loss-BWS: 0.000, val-rmse: 38.571, val-SAM: 2.306, val-PSNR: 32.783, val-ERGAS: 4.546, Inference time: 2.545832 ms, Optim time: 297.434417, lr: 0.000093
+S : [epoch: 102] Loss: 0.016, Loss-SAM: 0.017, Loss-BWS: 0.000, val-rmse: 46.864, val-SAM: 2.893, val-PSNR: 31.588, val-ERGAS: 4.260, Inference time: 1.697742 ms, Optim time: 131.839461, lr: 0.000093
+ 
+T : [epoch: 104] Loss: 0.013, Loss-SAM: 0.015, Loss-BWS: 0.000, val-rmse: 53.251, val-SAM: 3.061, val-PSNR: 30.088, val-ERGAS: 6.190, Inference time: 2.501971 ms, Optim time: 297.587261, lr: 0.000093
+S : [epoch: 104] Loss: 0.015, Loss-SAM: 0.017, Loss-BWS: 0.000, val-rmse: 98.342, val-SAM: 5.647, val-PSNR: 24.635, val-ERGAS: 14.121, Inference time: 1.623144 ms, Optim time: 131.933566, lr: 0.000093
+ 
+T : [epoch: 106] Loss: 0.014, Loss-SAM: 0.015, Loss-BWS: 0.000, val-rmse: 39.058, val-SAM: 2.309, val-PSNR: 33.098, val-ERGAS: 3.827, Inference time: 2.530292 ms, Optim time: 297.484571, lr: 0.000092
+S : [epoch: 106] Loss: 0.018, Loss-SAM: 0.018, Loss-BWS: 0.000, val-rmse: 51.756, val-SAM: 2.990, val-PSNR: 30.537, val-ERGAS: 4.774, Inference time: 1.661237 ms, Optim time: 131.849250, lr: 0.000092
+ 
+T : [epoch: 108] Loss: 0.013, Loss-SAM: 0.015, Loss-BWS: 0.000, val-rmse: 37.665, val-SAM: 2.124, val-PSNR: 33.663, val-ERGAS: 3.071, Inference time: 2.520405 ms, Optim time: 297.518225, lr: 0.000092
+S : [epoch: 108] Loss: 0.016, Loss-SAM: 0.017, Loss-BWS: 0.000, val-rmse: 43.559, val-SAM: 2.492, val-PSNR: 31.703, val-ERGAS: 4.763, Inference time: 1.678325 ms, Optim time: 131.866066, lr: 0.000092
+ 
+T : [epoch: 110] Loss: 0.011, Loss-SAM: 0.014, Loss-BWS: 0.000, val-rmse: 66.110, val-SAM: 4.369, val-PSNR: 28.098, val-ERGAS: 9.831, Inference time: 2.540579 ms, Optim time: 297.553997, lr: 0.000092
+S : [epoch: 110] Loss: 0.012, Loss-SAM: 0.016, Loss-BWS: 0.000, val-rmse: 42.168, val-SAM: 2.572, val-PSNR: 32.305, val-ERGAS: 4.341, Inference time: 1.611435 ms, Optim time: 131.882528, lr: 0.000092
+ 
+T : [epoch: 112] Loss: 0.011, Loss-SAM: 0.015, Loss-BWS: 0.000, val-rmse: 38.837, val-SAM: 2.202, val-PSNR: 33.260, val-ERGAS: 3.617, Inference time: 2.537637 ms, Optim time: 297.494471, lr: 0.000092
+S : [epoch: 112] Loss: 0.015, Loss-SAM: 0.017, Loss-BWS: 0.000, val-rmse: 45.609, val-SAM: 2.708, val-PSNR: 31.416, val-ERGAS: 5.152, Inference time: 1.696491 ms, Optim time: 131.850623, lr: 0.000092
+ 
+T : [epoch: 114] Loss: 0.015, Loss-SAM: 0.015, Loss-BWS: 0.000, val-rmse: 40.352, val-SAM: 2.322, val-PSNR: 32.731, val-ERGAS: 4.146, Inference time: 2.530649 ms, Optim time: 297.459993, lr: 0.000091
+S : [epoch: 114] Loss: 0.018, Loss-SAM: 0.017, Loss-BWS: 0.000, val-rmse: 51.661, val-SAM: 3.056, val-PSNR: 30.356, val-ERGAS: 6.507, Inference time: 1.696725 ms, Optim time: 131.865649, lr: 0.000091
+ 
+T : [epoch: 116] Loss: 0.013, Loss-SAM: 0.015, Loss-BWS: 0.000, val-rmse: 37.936, val-SAM: 2.120, val-PSNR: 33.260, val-ERGAS: 3.713, Inference time: 2.522186 ms, Optim time: 297.553828, lr: 0.000091
+S : [epoch: 116] Loss: 0.012, Loss-SAM: 0.016, Loss-BWS: 0.000, val-rmse: 40.365, val-SAM: 2.331, val-PSNR: 32.633, val-ERGAS: 4.007, Inference time: 1.633097 ms, Optim time: 131.874318, lr: 0.000091
+ 
+T : [epoch: 118] Loss: 0.012, Loss-SAM: 0.014, Loss-BWS: 0.000, val-rmse: 51.555, val-SAM: 2.551, val-PSNR: 31.261, val-ERGAS: 6.398, Inference time: 2.556725 ms, Optim time: 297.669438, lr: 0.000091
+S : [epoch: 118] Loss: 0.017, Loss-SAM: 0.017, Loss-BWS: 0.000, val-rmse: 60.710, val-SAM: 3.572, val-PSNR: 28.917, val-ERGAS: 7.283, Inference time: 1.633900 ms, Optim time: 131.934269, lr: 0.000091
+ 
+T : [epoch: 120] Loss: 0.010, Loss-SAM: 0.014, Loss-BWS: 0.000, val-rmse: 52.835, val-SAM: 2.790, val-PSNR: 30.256, val-ERGAS: 6.802, Inference time: 2.537451 ms, Optim time: 297.493691, lr: 0.000090
+S : [epoch: 120] Loss: 0.012, Loss-SAM: 0.015, Loss-BWS: 0.000, val-rmse: 45.245, val-SAM: 2.690, val-PSNR: 31.885, val-ERGAS: 4.145, Inference time: 1.620649 ms, Optim time: 131.818957, lr: 0.000090
+ 
+T : [epoch: 122] Loss: 0.011, Loss-SAM: 0.014, Loss-BWS: 0.000, val-rmse: 48.921, val-SAM: 2.979, val-PSNR: 30.805, val-ERGAS: 5.450, Inference time: 2.513782 ms, Optim time: 297.431571, lr: 0.000090
+S : [epoch: 122] Loss: 0.012, Loss-SAM: 0.016, Loss-BWS: 0.000, val-rmse: 50.794, val-SAM: 3.187, val-PSNR: 30.625, val-ERGAS: 5.888, Inference time: 1.596266 ms, Optim time: 131.807425, lr: 0.000090
+ 
+T : [epoch: 124] Loss: 0.011, Loss-SAM: 0.014, Loss-BWS: 0.000, val-rmse: 50.241, val-SAM: 3.303, val-PSNR: 30.526, val-ERGAS: 7.515, Inference time: 2.596591 ms, Optim time: 297.575262, lr: 0.000090
+S : [epoch: 124] Loss: 0.013, Loss-SAM: 0.016, Loss-BWS: 0.000, val-rmse: 55.107, val-SAM: 3.197, val-PSNR: 29.943, val-ERGAS: 8.147, Inference time: 1.632379 ms, Optim time: 131.814445, lr: 0.000090
+ 
+T : [epoch: 126] Loss: 0.010, Loss-SAM: 0.014, Loss-BWS: 0.000, val-rmse: 50.687, val-SAM: 2.527, val-PSNR: 31.617, val-ERGAS: 4.282, Inference time: 2.518622 ms, Optim time: 297.566492, lr: 0.000089
+S : [epoch: 126] Loss: 0.012, Loss-SAM: 0.015, Loss-BWS: 0.000, val-rmse: 44.057, val-SAM: 2.566, val-PSNR: 32.266, val-ERGAS: 3.961, Inference time: 1.629153 ms, Optim time: 131.822836, lr: 0.000089
+ 
+T : [epoch: 128] Loss: 0.011, Loss-SAM: 0.014, Loss-BWS: 0.000, val-rmse: 45.291, val-SAM: 2.831, val-PSNR: 31.121, val-ERGAS: 7.602, Inference time: 2.528100 ms, Optim time: 297.360756, lr: 0.000089
+S : [epoch: 128] Loss: 0.012, Loss-SAM: 0.015, Loss-BWS: 0.000, val-rmse: 48.133, val-SAM: 2.812, val-PSNR: 31.342, val-ERGAS: 4.562, Inference time: 1.611165 ms, Optim time: 131.745791, lr: 0.000089
+ 
+T : [epoch: 130] Loss: 0.011, Loss-SAM: 0.014, Loss-BWS: 0.000, val-rmse: 37.014, val-SAM: 2.121, val-PSNR: 33.583, val-ERGAS: 3.610, Inference time: 2.563074 ms, Optim time: 296.530909, lr: 0.000089
+S : [epoch: 130] Loss: 0.012, Loss-SAM: 0.015, Loss-BWS: 0.000, val-rmse: 43.296, val-SAM: 2.496, val-PSNR: 32.256, val-ERGAS: 3.819, Inference time: 1.614524 ms, Optim time: 131.689760, lr: 0.000089
+ 
+T : [epoch: 132] Loss: 0.012, Loss-SAM: 0.015, Loss-BWS: 0.000, val-rmse: 48.048, val-SAM: 3.169, val-PSNR: 30.973, val-ERGAS: 5.922, Inference time: 2.544566 ms, Optim time: 296.884204, lr: 0.000088
+S : [epoch: 132] Loss: 0.012, Loss-SAM: 0.015, Loss-BWS: 0.000, val-rmse: 48.615, val-SAM: 3.050, val-PSNR: 31.107, val-ERGAS: 4.754, Inference time: 1.613815 ms, Optim time: 131.840210, lr: 0.000088
+ 
+T : [epoch: 134] Loss: 0.010, Loss-SAM: 0.014, Loss-BWS: 0.000, val-rmse: 39.153, val-SAM: 2.317, val-PSNR: 32.713, val-ERGAS: 5.258, Inference time: 2.514625 ms, Optim time: 297.220084, lr: 0.000088
+S : [epoch: 134] Loss: 0.012, Loss-SAM: 0.015, Loss-BWS: 0.000, val-rmse: 39.472, val-SAM: 2.338, val-PSNR: 32.945, val-ERGAS: 3.389, Inference time: 1.673299 ms, Optim time: 131.901310, lr: 0.000088
+ 
+T : [epoch: 136] Loss: 0.010, Loss-SAM: 0.014, Loss-BWS: 0.000, val-rmse: 43.045, val-SAM: 2.415, val-PSNR: 33.122, val-ERGAS: 3.698, Inference time: 2.523052 ms, Optim time: 297.241001, lr: 0.000088
+S : [epoch: 136] Loss: 0.011, Loss-SAM: 0.015, Loss-BWS: 0.000, val-rmse: 50.650, val-SAM: 3.396, val-PSNR: 31.271, val-ERGAS: 4.663, Inference time: 1.647919 ms, Optim time: 131.882871, lr: 0.000088
+ 
+T : [epoch: 138] Loss: 0.012, Loss-SAM: 0.014, Loss-BWS: 0.000, val-rmse: 38.815, val-SAM: 2.034, val-PSNR: 33.271, val-ERGAS: 3.502, Inference time: 2.540965 ms, Optim time: 297.421436, lr: 0.000087
+S : [epoch: 138] Loss: 0.016, Loss-SAM: 0.016, Loss-BWS: 0.000, val-rmse: 50.066, val-SAM: 2.957, val-PSNR: 30.655, val-ERGAS: 5.640, Inference time: 1.606604 ms, Optim time: 131.923274, lr: 0.000087
+ 
+T : [epoch: 140] Loss: 0.010, Loss-SAM: 0.014, Loss-BWS: 0.000, val-rmse: 46.003, val-SAM: 2.652, val-PSNR: 31.495, val-ERGAS: 5.280, Inference time: 2.606612 ms, Optim time: 297.179434, lr: 0.000087
+S : [epoch: 140] Loss: 0.013, Loss-SAM: 0.016, Loss-BWS: 0.000, val-rmse: 42.501, val-SAM: 2.357, val-PSNR: 32.462, val-ERGAS: 3.778, Inference time: 1.720082 ms, Optim time: 131.774259, lr: 0.000087
+ 
+T : [epoch: 142] Loss: 0.010, Loss-SAM: 0.014, Loss-BWS: 0.000, val-rmse: 43.784, val-SAM: 2.539, val-PSNR: 31.348, val-ERGAS: 5.760, Inference time: 2.526977 ms, Optim time: 297.513647, lr: 0.000087
+S : [epoch: 142] Loss: 0.011, Loss-SAM: 0.015, Loss-BWS: 0.000, val-rmse: 53.684, val-SAM: 2.897, val-PSNR: 31.295, val-ERGAS: 4.433, Inference time: 1.635277 ms, Optim time: 131.949770, lr: 0.000087
+ 
+T : [epoch: 144] Loss: 0.010, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 41.524, val-SAM: 2.479, val-PSNR: 32.931, val-ERGAS: 4.091, Inference time: 2.554995 ms, Optim time: 297.436468, lr: 0.000086
+S : [epoch: 144] Loss: 0.012, Loss-SAM: 0.015, Loss-BWS: 0.000, val-rmse: 42.823, val-SAM: 2.507, val-PSNR: 32.080, val-ERGAS: 5.052, Inference time: 1.633139 ms, Optim time: 131.846138, lr: 0.000086
+ 
+T : [epoch: 146] Loss: 0.010, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 34.570, val-SAM: 1.929, val-PSNR: 34.342, val-ERGAS: 2.975, Inference time: 2.552035 ms, Optim time: 297.529779, lr: 0.000086
+S : [epoch: 146] Loss: 0.025, Loss-SAM: 0.018, Loss-BWS: 0.001, val-rmse: 43.290, val-SAM: 2.661, val-PSNR: 31.921, val-ERGAS: 5.691, Inference time: 1.607413 ms, Optim time: 131.880999, lr: 0.000086
+ 
+T : [epoch: 148] Loss: 0.014, Loss-SAM: 0.015, Loss-BWS: 0.000, val-rmse: 44.186, val-SAM: 2.892, val-PSNR: 32.094, val-ERGAS: 4.310, Inference time: 2.528538 ms, Optim time: 297.571226, lr: 0.000086
+S : [epoch: 148] Loss: 0.012, Loss-SAM: 0.015, Loss-BWS: 0.000, val-rmse: 41.403, val-SAM: 2.489, val-PSNR: 32.377, val-ERGAS: 4.165, Inference time: 1.649863 ms, Optim time: 131.820992, lr: 0.000086
+ 
+T : [epoch: 150] Loss: 0.010, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 36.427, val-SAM: 2.042, val-PSNR: 33.797, val-ERGAS: 3.465, Inference time: 2.602258 ms, Optim time: 297.389613, lr: 0.000085
+S : [epoch: 150] Loss: 0.011, Loss-SAM: 0.014, Loss-BWS: 0.000, val-rmse: 38.423, val-SAM: 2.169, val-PSNR: 32.981, val-ERGAS: 3.941, Inference time: 1.599977 ms, Optim time: 131.843847, lr: 0.000085
+ 
+T : [epoch: 152] Loss: 0.010, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 39.839, val-SAM: 2.273, val-PSNR: 33.200, val-ERGAS: 3.124, Inference time: 2.520474 ms, Optim time: 297.394521, lr: 0.000085
+S : [epoch: 152] Loss: 0.011, Loss-SAM: 0.014, Loss-BWS: 0.000, val-rmse: 41.204, val-SAM: 2.306, val-PSNR: 32.790, val-ERGAS: 3.853, Inference time: 1.586291 ms, Optim time: 131.828974, lr: 0.000085
+ 
+T : [epoch: 154] Loss: 0.010, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 39.546, val-SAM: 2.276, val-PSNR: 33.006, val-ERGAS: 3.714, Inference time: 2.534952 ms, Optim time: 296.013506, lr: 0.000084
+S : [epoch: 154] Loss: 0.011, Loss-SAM: 0.015, Loss-BWS: 0.000, val-rmse: 41.236, val-SAM: 2.508, val-PSNR: 32.614, val-ERGAS: 4.023, Inference time: 1.602825 ms, Optim time: 131.649144, lr: 0.000084
+ 
+T : [epoch: 156] Loss: 0.010, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 34.766, val-SAM: 2.004, val-PSNR: 34.247, val-ERGAS: 3.055, Inference time: 2.551070 ms, Optim time: 296.926330, lr: 0.000084
+S : [epoch: 156] Loss: 0.011, Loss-SAM: 0.015, Loss-BWS: 0.000, val-rmse: 39.178, val-SAM: 2.312, val-PSNR: 33.141, val-ERGAS: 3.290, Inference time: 1.612052 ms, Optim time: 131.767884, lr: 0.000084
+ 
+T : [epoch: 158] Loss: 0.009, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 36.922, val-SAM: 2.183, val-PSNR: 33.457, val-ERGAS: 3.646, Inference time: 2.548343 ms, Optim time: 296.728012, lr: 0.000084
+S : [epoch: 158] Loss: 0.011, Loss-SAM: 0.014, Loss-BWS: 0.000, val-rmse: 44.400, val-SAM: 2.492, val-PSNR: 31.992, val-ERGAS: 4.347, Inference time: 1.664271 ms, Optim time: 131.869878, lr: 0.000084
+ 
+T : [epoch: 160] Loss: 0.009, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 39.109, val-SAM: 2.104, val-PSNR: 32.907, val-ERGAS: 4.093, Inference time: 2.570336 ms, Optim time: 296.639803, lr: 0.000083
+S : [epoch: 160] Loss: 0.010, Loss-SAM: 0.014, Loss-BWS: 0.000, val-rmse: 41.463, val-SAM: 2.267, val-PSNR: 32.706, val-ERGAS: 4.048, Inference time: 1.650631 ms, Optim time: 131.727657, lr: 0.000083
+ 
+T : [epoch: 162] Loss: 0.010, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 40.123, val-SAM: 2.215, val-PSNR: 32.684, val-ERGAS: 4.216, Inference time: 2.510508 ms, Optim time: 296.733815, lr: 0.000083
+S : [epoch: 162] Loss: 0.012, Loss-SAM: 0.015, Loss-BWS: 0.000, val-rmse: 41.130, val-SAM: 2.336, val-PSNR: 32.597, val-ERGAS: 4.141, Inference time: 1.656758 ms, Optim time: 131.717496, lr: 0.000083
+ 
+T : [epoch: 164] Loss: 0.009, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 35.053, val-SAM: 1.931, val-PSNR: 33.856, val-ERGAS: 3.246, Inference time: 2.575512 ms, Optim time: 297.064486, lr: 0.000082
+S : [epoch: 164] Loss: 0.011, Loss-SAM: 0.015, Loss-BWS: 0.000, val-rmse: 38.401, val-SAM: 2.182, val-PSNR: 32.860, val-ERGAS: 4.134, Inference time: 1.717175 ms, Optim time: 131.753615, lr: 0.000082
+ 
+T : [epoch: 166] Loss: 0.010, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 35.584, val-SAM: 1.973, val-PSNR: 34.046, val-ERGAS: 3.179, Inference time: 2.524482 ms, Optim time: 297.075176, lr: 0.000082
+S : [epoch: 166] Loss: 0.011, Loss-SAM: 0.014, Loss-BWS: 0.000, val-rmse: 48.628, val-SAM: 3.097, val-PSNR: 30.346, val-ERGAS: 7.817, Inference time: 1.586795 ms, Optim time: 131.744993, lr: 0.000082
+ 
+T : [epoch: 168] Loss: 0.010, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 43.531, val-SAM: 2.615, val-PSNR: 32.014, val-ERGAS: 4.978, Inference time: 2.523940 ms, Optim time: 297.421129, lr: 0.000082
+S : [epoch: 168] Loss: 0.014, Loss-SAM: 0.015, Loss-BWS: 0.000, val-rmse: 39.898, val-SAM: 2.354, val-PSNR: 32.879, val-ERGAS: 3.727, Inference time: 1.612210 ms, Optim time: 131.888362, lr: 0.000082
+ 
+T : [epoch: 170] Loss: 0.008, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 35.293, val-SAM: 1.987, val-PSNR: 34.032, val-ERGAS: 3.687, Inference time: 2.573721 ms, Optim time: 296.368390, lr: 0.000081
+S : [epoch: 170] Loss: 0.011, Loss-SAM: 0.014, Loss-BWS: 0.000, val-rmse: 40.568, val-SAM: 2.364, val-PSNR: 32.912, val-ERGAS: 3.747, Inference time: 1.617924 ms, Optim time: 131.667113, lr: 0.000081
+ 
+T : [epoch: 172] Loss: 0.009, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 40.370, val-SAM: 2.268, val-PSNR: 32.697, val-ERGAS: 4.536, Inference time: 2.519169 ms, Optim time: 297.001656, lr: 0.000081
+S : [epoch: 172] Loss: 0.010, Loss-SAM: 0.014, Loss-BWS: 0.000, val-rmse: 41.891, val-SAM: 2.475, val-PSNR: 32.384, val-ERGAS: 3.734, Inference time: 1.636912 ms, Optim time: 131.703952, lr: 0.000081
+ 
+T : [epoch: 174] Loss: 0.009, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 34.614, val-SAM: 1.887, val-PSNR: 34.070, val-ERGAS: 3.289, Inference time: 2.537462 ms, Optim time: 297.510894, lr: 0.000080
+S : [epoch: 174] Loss: 0.012, Loss-SAM: 0.015, Loss-BWS: 0.000, val-rmse: 38.693, val-SAM: 2.265, val-PSNR: 33.283, val-ERGAS: 3.680, Inference time: 1.689169 ms, Optim time: 131.859585, lr: 0.000080
+ 
+T : [epoch: 176] Loss: 0.018, Loss-SAM: 0.015, Loss-BWS: 0.000, val-rmse: 38.486, val-SAM: 2.293, val-PSNR: 33.234, val-ERGAS: 3.821, Inference time: 2.514335 ms, Optim time: 297.503704, lr: 0.000080
+S : [epoch: 176] Loss: 0.011, Loss-SAM: 0.014, Loss-BWS: 0.000, val-rmse: 40.754, val-SAM: 2.490, val-PSNR: 32.531, val-ERGAS: 3.917, Inference time: 1.631745 ms, Optim time: 131.801031, lr: 0.000080
+ 
+T : [epoch: 178] Loss: 0.009, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 38.705, val-SAM: 2.336, val-PSNR: 32.908, val-ERGAS: 4.382, Inference time: 2.538264 ms, Optim time: 297.489544, lr: 0.000080
+S : [epoch: 178] Loss: 0.010, Loss-SAM: 0.014, Loss-BWS: 0.000, val-rmse: 40.195, val-SAM: 2.409, val-PSNR: 32.248, val-ERGAS: 4.511, Inference time: 1.617578 ms, Optim time: 131.844996, lr: 0.000080
+ 
+T : [epoch: 180] Loss: 0.009, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 37.357, val-SAM: 2.101, val-PSNR: 33.773, val-ERGAS: 3.081, Inference time: 2.562716 ms, Optim time: 297.671976, lr: 0.000079
+S : [epoch: 180] Loss: 0.010, Loss-SAM: 0.014, Loss-BWS: 0.000, val-rmse: 37.744, val-SAM: 2.150, val-PSNR: 33.507, val-ERGAS: 3.220, Inference time: 1.602949 ms, Optim time: 131.910329, lr: 0.000079
+ 
+T : [epoch: 182] Loss: 0.009, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 36.588, val-SAM: 2.110, val-PSNR: 33.583, val-ERGAS: 3.506, Inference time: 2.535551 ms, Optim time: 297.461575, lr: 0.000079
+S : [epoch: 182] Loss: 0.010, Loss-SAM: 0.014, Loss-BWS: 0.000, val-rmse: 41.862, val-SAM: 2.182, val-PSNR: 32.639, val-ERGAS: 3.690, Inference time: 1.638336 ms, Optim time: 131.824299, lr: 0.000079
+ 
+T : [epoch: 184] Loss: 0.009, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 43.554, val-SAM: 2.287, val-PSNR: 32.821, val-ERGAS: 4.703, Inference time: 2.567757 ms, Optim time: 296.356831, lr: 0.000078
+S : [epoch: 184] Loss: 0.010, Loss-SAM: 0.014, Loss-BWS: 0.000, val-rmse: 49.961, val-SAM: 2.549, val-PSNR: 31.451, val-ERGAS: 5.385, Inference time: 1.600113 ms, Optim time: 131.741191, lr: 0.000078
+ 
+T : [epoch: 186] Loss: 0.009, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 40.634, val-SAM: 2.245, val-PSNR: 32.365, val-ERGAS: 4.522, Inference time: 2.550418 ms, Optim time: 296.324550, lr: 0.000078
+S : [epoch: 186] Loss: 0.010, Loss-SAM: 0.014, Loss-BWS: 0.000, val-rmse: 40.856, val-SAM: 2.147, val-PSNR: 32.746, val-ERGAS: 3.564, Inference time: 1.617941 ms, Optim time: 131.691654, lr: 0.000078
+ 
+T : [epoch: 188] Loss: 0.009, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 33.257, val-SAM: 1.821, val-PSNR: 34.681, val-ERGAS: 2.773, Inference time: 2.529237 ms, Optim time: 296.241976, lr: 0.000077
+S : [epoch: 188] Loss: 0.010, Loss-SAM: 0.014, Loss-BWS: 0.000, val-rmse: 37.738, val-SAM: 2.083, val-PSNR: 33.751, val-ERGAS: 3.037, Inference time: 1.692668 ms, Optim time: 131.680214, lr: 0.000077
+ 
+T : [epoch: 190] Loss: 0.009, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 40.772, val-SAM: 2.377, val-PSNR: 32.930, val-ERGAS: 4.808, Inference time: 2.524449 ms, Optim time: 296.601319, lr: 0.000077
+S : [epoch: 190] Loss: 0.010, Loss-SAM: 0.014, Loss-BWS: 0.000, val-rmse: 39.381, val-SAM: 2.277, val-PSNR: 33.162, val-ERGAS: 3.557, Inference time: 1.638776 ms, Optim time: 131.647917, lr: 0.000077
+ 
+T : [epoch: 192] Loss: 0.009, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 39.145, val-SAM: 2.098, val-PSNR: 33.009, val-ERGAS: 3.939, Inference time: 2.542634 ms, Optim time: 296.888522, lr: 0.000077
+S : [epoch: 192] Loss: 0.010, Loss-SAM: 0.014, Loss-BWS: 0.000, val-rmse: 42.292, val-SAM: 2.327, val-PSNR: 32.475, val-ERGAS: 3.596, Inference time: 1.659628 ms, Optim time: 131.722028, lr: 0.000077
+ 
+T : [epoch: 194] Loss: 0.008, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 36.078, val-SAM: 1.970, val-PSNR: 33.428, val-ERGAS: 4.145, Inference time: 2.560319 ms, Optim time: 297.351683, lr: 0.000076
+S : [epoch: 194] Loss: 0.010, Loss-SAM: 0.014, Loss-BWS: 0.000, val-rmse: 38.714, val-SAM: 2.259, val-PSNR: 33.116, val-ERGAS: 3.940, Inference time: 1.636044 ms, Optim time: 131.775161, lr: 0.000076
+ 
+T : [epoch: 196] Loss: 0.009, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 41.755, val-SAM: 2.327, val-PSNR: 32.567, val-ERGAS: 4.330, Inference time: 2.524067 ms, Optim time: 297.447280, lr: 0.000076
+S : [epoch: 196] Loss: 0.011, Loss-SAM: 0.014, Loss-BWS: 0.000, val-rmse: 41.360, val-SAM: 2.278, val-PSNR: 32.485, val-ERGAS: 4.093, Inference time: 1.604830 ms, Optim time: 131.913023, lr: 0.000076
+ 
+T : [epoch: 198] Loss: 0.008, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 36.285, val-SAM: 1.994, val-PSNR: 33.929, val-ERGAS: 3.606, Inference time: 2.521495 ms, Optim time: 297.164230, lr: 0.000075
+S : [epoch: 198] Loss: 0.009, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 39.113, val-SAM: 2.454, val-PSNR: 33.490, val-ERGAS: 3.651, Inference time: 1.668513 ms, Optim time: 131.795729, lr: 0.000075
+ 
+T : [epoch: 200] Loss: 0.009, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 36.547, val-SAM: 2.196, val-PSNR: 33.301, val-ERGAS: 4.781, Inference time: 2.537436 ms, Optim time: 296.883149, lr: 0.000075
+S : [epoch: 200] Loss: 0.010, Loss-SAM: 0.014, Loss-BWS: 0.000, val-rmse: 39.482, val-SAM: 2.174, val-PSNR: 33.018, val-ERGAS: 3.679, Inference time: 1.593032 ms, Optim time: 131.735513, lr: 0.000075
+ 
+T : [epoch: 202] Loss: 0.008, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 35.703, val-SAM: 2.054, val-PSNR: 34.395, val-ERGAS: 2.962, Inference time: 2.512681 ms, Optim time: 296.870863, lr: 0.000074
+S : [epoch: 202] Loss: 0.009, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 36.079, val-SAM: 2.014, val-PSNR: 33.933, val-ERGAS: 3.046, Inference time: 1.593202 ms, Optim time: 131.597427, lr: 0.000074
+ 
+T : [epoch: 204] Loss: 0.008, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 38.709, val-SAM: 2.205, val-PSNR: 32.973, val-ERGAS: 3.764, Inference time: 2.556670 ms, Optim time: 297.460120, lr: 0.000074
+S : [epoch: 204] Loss: 0.009, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 40.797, val-SAM: 2.432, val-PSNR: 32.412, val-ERGAS: 4.461, Inference time: 1.646248 ms, Optim time: 131.929932, lr: 0.000074
+ 
+T : [epoch: 206] Loss: 0.008, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 45.746, val-SAM: 2.656, val-PSNR: 31.390, val-ERGAS: 5.747, Inference time: 2.554271 ms, Optim time: 296.172519, lr: 0.000073
+S : [epoch: 206] Loss: 0.009, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 42.089, val-SAM: 2.240, val-PSNR: 32.670, val-ERGAS: 3.672, Inference time: 1.620181 ms, Optim time: 131.640417, lr: 0.000073
+ 
+T : [epoch: 208] Loss: 0.009, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 37.712, val-SAM: 2.196, val-PSNR: 33.346, val-ERGAS: 3.609, Inference time: 2.617589 ms, Optim time: 296.520796, lr: 0.000073
+S : [epoch: 208] Loss: 0.010, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 39.438, val-SAM: 2.347, val-PSNR: 32.883, val-ERGAS: 3.840, Inference time: 1.627558 ms, Optim time: 131.788434, lr: 0.000073
+ 
+T : [epoch: 210] Loss: 0.009, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 36.208, val-SAM: 2.072, val-PSNR: 33.800, val-ERGAS: 3.587, Inference time: 2.525901 ms, Optim time: 296.767358, lr: 0.000072
+S : [epoch: 210] Loss: 0.009, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 37.247, val-SAM: 2.063, val-PSNR: 33.162, val-ERGAS: 4.124, Inference time: 1.653615 ms, Optim time: 131.702348, lr: 0.000072
+ 
+T : [epoch: 212] Loss: 0.008, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 37.973, val-SAM: 2.309, val-PSNR: 33.210, val-ERGAS: 4.440, Inference time: 2.533118 ms, Optim time: 296.510505, lr: 0.000072
+S : [epoch: 212] Loss: 0.009, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 42.352, val-SAM: 2.568, val-PSNR: 32.135, val-ERGAS: 5.075, Inference time: 1.641196 ms, Optim time: 131.634055, lr: 0.000072
+ 
+T : [epoch: 214] Loss: 0.008, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 33.718, val-SAM: 1.880, val-PSNR: 34.100, val-ERGAS: 3.351, Inference time: 2.529900 ms, Optim time: 296.646691, lr: 0.000072
+S : [epoch: 214] Loss: 0.010, Loss-SAM: 0.014, Loss-BWS: 0.000, val-rmse: 36.532, val-SAM: 2.107, val-PSNR: 33.589, val-ERGAS: 3.257, Inference time: 1.589392 ms, Optim time: 131.778125, lr: 0.000072
+ 
+T : [epoch: 216] Loss: 0.009, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 34.339, val-SAM: 1.899, val-PSNR: 33.875, val-ERGAS: 4.320, Inference time: 2.524105 ms, Optim time: 297.061578, lr: 0.000071
+S : [epoch: 216] Loss: 0.009, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 35.578, val-SAM: 1.987, val-PSNR: 34.157, val-ERGAS: 2.856, Inference time: 1.635392 ms, Optim time: 131.785797, lr: 0.000071
+ 
+T : [epoch: 218] Loss: 0.008, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 32.454, val-SAM: 1.744, val-PSNR: 35.025, val-ERGAS: 2.916, Inference time: 2.549417 ms, Optim time: 297.204987, lr: 0.000071
+S : [epoch: 218] Loss: 0.009, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 34.688, val-SAM: 1.934, val-PSNR: 34.333, val-ERGAS: 2.970, Inference time: 1.613320 ms, Optim time: 131.786819, lr: 0.000071
+ 
+T : [epoch: 220] Loss: 0.008, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 33.731, val-SAM: 1.847, val-PSNR: 34.489, val-ERGAS: 3.026, Inference time: 2.515464 ms, Optim time: 297.396006, lr: 0.000070
+S : [epoch: 220] Loss: 0.009, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 36.327, val-SAM: 2.019, val-PSNR: 34.084, val-ERGAS: 2.947, Inference time: 1.627893 ms, Optim time: 131.783547, lr: 0.000070
+ 
+T : [epoch: 222] Loss: 0.008, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 33.762, val-SAM: 1.875, val-PSNR: 34.456, val-ERGAS: 3.428, Inference time: 2.516830 ms, Optim time: 297.590186, lr: 0.000070
+S : [epoch: 222] Loss: 0.010, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 36.268, val-SAM: 2.019, val-PSNR: 33.828, val-ERGAS: 3.220, Inference time: 1.639105 ms, Optim time: 131.878505, lr: 0.000070
+ 
+T : [epoch: 224] Loss: 0.008, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 34.568, val-SAM: 1.929, val-PSNR: 34.277, val-ERGAS: 2.959, Inference time: 2.553020 ms, Optim time: 297.567426, lr: 0.000069
+S : [epoch: 224] Loss: 0.009, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 36.754, val-SAM: 2.130, val-PSNR: 33.650, val-ERGAS: 3.508, Inference time: 1.609522 ms, Optim time: 131.895700, lr: 0.000069
+ 
+T : [epoch: 226] Loss: 0.007, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 39.124, val-SAM: 2.282, val-PSNR: 33.256, val-ERGAS: 4.495, Inference time: 2.536135 ms, Optim time: 297.587205, lr: 0.000069
+S : [epoch: 226] Loss: 0.009, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 36.690, val-SAM: 2.175, val-PSNR: 33.605, val-ERGAS: 3.342, Inference time: 1.592237 ms, Optim time: 131.787271, lr: 0.000069
+ 
+T : [epoch: 228] Loss: 0.008, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 33.944, val-SAM: 1.811, val-PSNR: 34.494, val-ERGAS: 3.057, Inference time: 2.550972 ms, Optim time: 297.690298, lr: 0.000068
+S : [epoch: 228] Loss: 0.009, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 36.502, val-SAM: 2.180, val-PSNR: 33.642, val-ERGAS: 3.361, Inference time: 1.676493 ms, Optim time: 131.915267, lr: 0.000068
+ 
+T : [epoch: 230] Loss: 0.009, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 32.677, val-SAM: 1.853, val-PSNR: 34.847, val-ERGAS: 2.768, Inference time: 2.529875 ms, Optim time: 296.831272, lr: 0.000068
+S : [epoch: 230] Loss: 0.009, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 40.116, val-SAM: 2.219, val-PSNR: 32.398, val-ERGAS: 4.536, Inference time: 1.653007 ms, Optim time: 131.779998, lr: 0.000068
+ 
+T : [epoch: 232] Loss: 0.007, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 33.497, val-SAM: 1.896, val-PSNR: 34.538, val-ERGAS: 3.083, Inference time: 2.547854 ms, Optim time: 296.558449, lr: 0.000067
+S : [epoch: 232] Loss: 0.008, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 35.496, val-SAM: 1.963, val-PSNR: 34.169, val-ERGAS: 2.989, Inference time: 1.623715 ms, Optim time: 131.762692, lr: 0.000067
+ 
+T : [epoch: 234] Loss: 0.008, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 34.319, val-SAM: 1.935, val-PSNR: 34.275, val-ERGAS: 3.583, Inference time: 2.592087 ms, Optim time: 296.352697, lr: 0.000067
+S : [epoch: 234] Loss: 0.009, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 34.505, val-SAM: 1.952, val-PSNR: 34.235, val-ERGAS: 3.217, Inference time: 1.618162 ms, Optim time: 131.652613, lr: 0.000067
+ 
+T : [epoch: 236] Loss: 0.007, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 35.974, val-SAM: 1.982, val-PSNR: 33.935, val-ERGAS: 3.327, Inference time: 2.522075 ms, Optim time: 296.299486, lr: 0.000066
+S : [epoch: 236] Loss: 0.008, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 35.877, val-SAM: 1.973, val-PSNR: 33.767, val-ERGAS: 3.848, Inference time: 1.639236 ms, Optim time: 131.672983, lr: 0.000066
+ 
+T : [epoch: 238] Loss: 0.008, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 33.897, val-SAM: 1.804, val-PSNR: 34.552, val-ERGAS: 3.270, Inference time: 2.548419 ms, Optim time: 296.571237, lr: 0.000066
+S : [epoch: 238] Loss: 0.009, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 35.755, val-SAM: 2.041, val-PSNR: 33.989, val-ERGAS: 3.037, Inference time: 1.631774 ms, Optim time: 131.671417, lr: 0.000066
+ 
+T : [epoch: 240] Loss: 0.008, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 32.699, val-SAM: 1.853, val-PSNR: 34.520, val-ERGAS: 2.898, Inference time: 2.566941 ms, Optim time: 296.609119, lr: 0.000065
+S : [epoch: 240] Loss: 0.008, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 35.473, val-SAM: 2.007, val-PSNR: 34.046, val-ERGAS: 2.862, Inference time: 1.629936 ms, Optim time: 131.666419, lr: 0.000065
+ 
+T : [epoch: 242] Loss: 0.008, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 35.818, val-SAM: 2.103, val-PSNR: 33.262, val-ERGAS: 4.881, Inference time: 2.524786 ms, Optim time: 296.807618, lr: 0.000065
+S : [epoch: 242] Loss: 0.008, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 34.598, val-SAM: 1.949, val-PSNR: 34.304, val-ERGAS: 2.920, Inference time: 1.659586 ms, Optim time: 131.750759, lr: 0.000065
+ 
+T : [epoch: 244] Loss: 0.007, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 33.820, val-SAM: 1.938, val-PSNR: 34.424, val-ERGAS: 2.939, Inference time: 2.527736 ms, Optim time: 297.225296, lr: 0.000064
+S : [epoch: 244] Loss: 0.008, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 44.546, val-SAM: 2.788, val-PSNR: 31.996, val-ERGAS: 4.981, Inference time: 1.611236 ms, Optim time: 131.835811, lr: 0.000064
+ 
+T : [epoch: 246] Loss: 0.008, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 39.092, val-SAM: 2.435, val-PSNR: 32.970, val-ERGAS: 4.712, Inference time: 2.514403 ms, Optim time: 297.442771, lr: 0.000064
+S : [epoch: 246] Loss: 0.008, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 34.845, val-SAM: 1.956, val-PSNR: 34.132, val-ERGAS: 3.306, Inference time: 1.635246 ms, Optim time: 131.842933, lr: 0.000064
+ 
+T : [epoch: 248] Loss: 0.007, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 32.064, val-SAM: 1.761, val-PSNR: 35.175, val-ERGAS: 2.592, Inference time: 2.521876 ms, Optim time: 297.507823, lr: 0.000063
+S : [epoch: 248] Loss: 0.008, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 36.310, val-SAM: 2.129, val-PSNR: 33.868, val-ERGAS: 3.287, Inference time: 1.617658 ms, Optim time: 131.833983, lr: 0.000063
+ 
+T : [epoch: 250] Loss: 0.008, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 39.565, val-SAM: 2.150, val-PSNR: 32.500, val-ERGAS: 4.778, Inference time: 2.546748 ms, Optim time: 297.583878, lr: 0.000063
+S : [epoch: 250] Loss: 0.008, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 35.156, val-SAM: 1.975, val-PSNR: 34.066, val-ERGAS: 3.084, Inference time: 1.589078 ms, Optim time: 131.830403, lr: 0.000063
+ 
+T : [epoch: 252] Loss: 0.008, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 32.062, val-SAM: 1.789, val-PSNR: 34.743, val-ERGAS: 3.435, Inference time: 2.515872 ms, Optim time: 297.540341, lr: 0.000062
+S : [epoch: 252] Loss: 0.009, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 34.826, val-SAM: 1.985, val-PSNR: 34.373, val-ERGAS: 2.902, Inference time: 1.641634 ms, Optim time: 131.862613, lr: 0.000062
+ 
+T : [epoch: 254] Loss: 0.008, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 32.479, val-SAM: 1.700, val-PSNR: 35.152, val-ERGAS: 2.550, Inference time: 2.528054 ms, Optim time: 297.562555, lr: 0.000062
+S : [epoch: 254] Loss: 0.009, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 34.176, val-SAM: 1.860, val-PSNR: 34.596, val-ERGAS: 2.694, Inference time: 1.632838 ms, Optim time: 131.842567, lr: 0.000062
+ 
+T : [epoch: 256] Loss: 0.007, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 32.956, val-SAM: 1.779, val-PSNR: 34.746, val-ERGAS: 2.837, Inference time: 2.530732 ms, Optim time: 297.576218, lr: 0.000061
+S : [epoch: 256] Loss: 0.009, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 38.133, val-SAM: 2.297, val-PSNR: 33.383, val-ERGAS: 3.388, Inference time: 1.674243 ms, Optim time: 131.861930, lr: 0.000061
+ 
+T : [epoch: 258] Loss: 0.007, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 37.030, val-SAM: 2.207, val-PSNR: 33.741, val-ERGAS: 3.955, Inference time: 2.530004 ms, Optim time: 297.604963, lr: 0.000061
+S : [epoch: 258] Loss: 0.008, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 36.459, val-SAM: 2.040, val-PSNR: 33.684, val-ERGAS: 3.770, Inference time: 1.658993 ms, Optim time: 131.893196, lr: 0.000061
+ 
+T : [epoch: 260] Loss: 0.007, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 32.595, val-SAM: 1.800, val-PSNR: 34.672, val-ERGAS: 3.149, Inference time: 2.547135 ms, Optim time: 297.646886, lr: 0.000060
+S : [epoch: 260] Loss: 0.008, Loss-SAM: 0.013, Loss-BWS: 0.000, val-rmse: 35.445, val-SAM: 1.969, val-PSNR: 34.075, val-ERGAS: 3.170, Inference time: 1.653914 ms, Optim time: 131.878783, lr: 0.000060
+ 
+T : [epoch: 262] Loss: 0.007, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 34.413, val-SAM: 1.900, val-PSNR: 33.790, val-ERGAS: 4.182, Inference time: 2.568644 ms, Optim time: 297.615168, lr: 0.000060
+S : [epoch: 262] Loss: 0.008, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 42.032, val-SAM: 2.330, val-PSNR: 32.603, val-ERGAS: 4.795, Inference time: 1.694568 ms, Optim time: 131.926962, lr: 0.000060
+ 
+T : [epoch: 264] Loss: 0.008, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 35.973, val-SAM: 2.110, val-PSNR: 33.398, val-ERGAS: 3.817, Inference time: 2.529585 ms, Optim time: 297.674574, lr: 0.000059
+S : [epoch: 264] Loss: 0.008, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 34.764, val-SAM: 1.907, val-PSNR: 34.187, val-ERGAS: 2.929, Inference time: 1.627991 ms, Optim time: 131.953957, lr: 0.000059
+ 
+T : [epoch: 266] Loss: 0.007, Loss-SAM: 0.011, Loss-BWS: 0.000, val-rmse: 35.026, val-SAM: 1.878, val-PSNR: 34.364, val-ERGAS: 3.209, Inference time: 2.527062 ms, Optim time: 297.578297, lr: 0.000059
+S : [epoch: 266] Loss: 0.008, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 35.707, val-SAM: 1.953, val-PSNR: 33.938, val-ERGAS: 3.293, Inference time: 1.618301 ms, Optim time: 131.823863, lr: 0.000059
+ 
+T : [epoch: 268] Loss: 0.007, Loss-SAM: 0.011, Loss-BWS: 0.000, val-rmse: 30.589, val-SAM: 1.627, val-PSNR: 35.701, val-ERGAS: 2.351, Inference time: 2.503684 ms, Optim time: 297.607089, lr: 0.000058
+S : [epoch: 268] Loss: 0.008, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 34.293, val-SAM: 1.865, val-PSNR: 34.482, val-ERGAS: 2.800, Inference time: 1.592165 ms, Optim time: 131.875604, lr: 0.000058
+ 
+T : [epoch: 270] Loss: 0.008, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 31.800, val-SAM: 1.744, val-PSNR: 34.674, val-ERGAS: 3.064, Inference time: 2.507987 ms, Optim time: 297.614724, lr: 0.000058
+S : [epoch: 270] Loss: 0.008, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 33.575, val-SAM: 1.859, val-PSNR: 34.626, val-ERGAS: 2.770, Inference time: 1.635878 ms, Optim time: 131.888879, lr: 0.000058
+ 
+T : [epoch: 272] Loss: 0.007, Loss-SAM: 0.011, Loss-BWS: 0.000, val-rmse: 33.768, val-SAM: 1.902, val-PSNR: 34.553, val-ERGAS: 2.741, Inference time: 2.511150 ms, Optim time: 297.721465, lr: 0.000057
+S : [epoch: 272] Loss: 0.008, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 35.317, val-SAM: 2.030, val-PSNR: 34.299, val-ERGAS: 2.841, Inference time: 1.616186 ms, Optim time: 131.985523, lr: 0.000057
+ 
+T : [epoch: 274] Loss: 0.007, Loss-SAM: 0.011, Loss-BWS: 0.000, val-rmse: 40.966, val-SAM: 2.155, val-PSNR: 32.620, val-ERGAS: 4.302, Inference time: 2.519381 ms, Optim time: 297.573985, lr: 0.000057
+S : [epoch: 274] Loss: 0.008, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 37.668, val-SAM: 1.955, val-PSNR: 33.506, val-ERGAS: 3.158, Inference time: 1.607103 ms, Optim time: 131.851738, lr: 0.000057
+ 
+T : [epoch: 276] Loss: 0.007, Loss-SAM: 0.011, Loss-BWS: 0.000, val-rmse: 33.984, val-SAM: 1.981, val-PSNR: 34.395, val-ERGAS: 3.494, Inference time: 2.527987 ms, Optim time: 297.374670, lr: 0.000056
+S : [epoch: 276] Loss: 0.008, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 35.108, val-SAM: 1.936, val-PSNR: 34.277, val-ERGAS: 3.013, Inference time: 1.654316 ms, Optim time: 131.816550, lr: 0.000056
+ 
+T : [epoch: 278] Loss: 0.007, Loss-SAM: 0.011, Loss-BWS: 0.000, val-rmse: 31.739, val-SAM: 1.697, val-PSNR: 35.278, val-ERGAS: 2.533, Inference time: 2.541679 ms, Optim time: 297.732202, lr: 0.000055
+S : [epoch: 278] Loss: 0.008, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 40.350, val-SAM: 2.096, val-PSNR: 32.704, val-ERGAS: 4.054, Inference time: 1.592683 ms, Optim time: 131.941822, lr: 0.000055
+ 
+T : [epoch: 280] Loss: 0.007, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 31.463, val-SAM: 1.714, val-PSNR: 35.178, val-ERGAS: 2.510, Inference time: 2.513789 ms, Optim time: 297.548224, lr: 0.000055
+S : [epoch: 280] Loss: 0.008, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 33.641, val-SAM: 1.898, val-PSNR: 34.470, val-ERGAS: 2.974, Inference time: 1.667873 ms, Optim time: 131.822770, lr: 0.000055
+ 
+T : [epoch: 282] Loss: 0.007, Loss-SAM: 0.011, Loss-BWS: 0.000, val-rmse: 33.079, val-SAM: 1.856, val-PSNR: 34.426, val-ERGAS: 2.835, Inference time: 2.527102 ms, Optim time: 297.671043, lr: 0.000054
+S : [epoch: 282] Loss: 0.007, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 33.806, val-SAM: 1.914, val-PSNR: 34.400, val-ERGAS: 2.871, Inference time: 1.690720 ms, Optim time: 131.889216, lr: 0.000054
+ 
+T : [epoch: 284] Loss: 0.007, Loss-SAM: 0.011, Loss-BWS: 0.000, val-rmse: 30.868, val-SAM: 1.645, val-PSNR: 35.568, val-ERGAS: 2.384, Inference time: 2.519010 ms, Optim time: 296.843362, lr: 0.000054
+S : [epoch: 284] Loss: 0.008, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 33.237, val-SAM: 1.851, val-PSNR: 34.764, val-ERGAS: 2.694, Inference time: 1.664054 ms, Optim time: 131.738550, lr: 0.000054
+ 
+T : [epoch: 286] Loss: 0.007, Loss-SAM: 0.011, Loss-BWS: 0.000, val-rmse: 31.508, val-SAM: 1.737, val-PSNR: 35.109, val-ERGAS: 2.909, Inference time: 2.524447 ms, Optim time: 297.253794, lr: 0.000053
+S : [epoch: 286] Loss: 0.008, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 33.197, val-SAM: 1.844, val-PSNR: 34.769, val-ERGAS: 2.744, Inference time: 1.696522 ms, Optim time: 131.836391, lr: 0.000053
+ 
+T : [epoch: 288] Loss: 0.007, Loss-SAM: 0.011, Loss-BWS: 0.000, val-rmse: 35.887, val-SAM: 2.101, val-PSNR: 33.743, val-ERGAS: 4.128, Inference time: 2.570249 ms, Optim time: 297.323177, lr: 0.000053
+S : [epoch: 288] Loss: 0.008, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 37.544, val-SAM: 2.205, val-PSNR: 33.247, val-ERGAS: 4.178, Inference time: 1.611464 ms, Optim time: 131.766183, lr: 0.000053
+ 
+T : [epoch: 290] Loss: 0.006, Loss-SAM: 0.011, Loss-BWS: 0.000, val-rmse: 32.497, val-SAM: 1.719, val-PSNR: 35.175, val-ERGAS: 2.594, Inference time: 2.551618 ms, Optim time: 296.398415, lr: 0.000052
+S : [epoch: 290] Loss: 0.008, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 32.949, val-SAM: 1.785, val-PSNR: 34.842, val-ERGAS: 2.662, Inference time: 1.650940 ms, Optim time: 131.760672, lr: 0.000052
+ 
+T : [epoch: 292] Loss: 0.007, Loss-SAM: 0.011, Loss-BWS: 0.000, val-rmse: 30.451, val-SAM: 1.645, val-PSNR: 35.440, val-ERGAS: 2.487, Inference time: 2.579670 ms, Optim time: 297.169014, lr: 0.000052
+S : [epoch: 292] Loss: 0.008, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 32.925, val-SAM: 1.829, val-PSNR: 34.634, val-ERGAS: 2.823, Inference time: 1.642054 ms, Optim time: 131.932586, lr: 0.000052
+ 
+T : [epoch: 294] Loss: 0.007, Loss-SAM: 0.011, Loss-BWS: 0.000, val-rmse: 30.828, val-SAM: 1.661, val-PSNR: 35.617, val-ERGAS: 2.407, Inference time: 2.579583 ms, Optim time: 297.275411, lr: 0.000051
+S : [epoch: 294] Loss: 0.007, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 32.342, val-SAM: 1.748, val-PSNR: 35.137, val-ERGAS: 2.502, Inference time: 1.651365 ms, Optim time: 131.900459, lr: 0.000051
+ 
+T : [epoch: 296] Loss: 0.006, Loss-SAM: 0.011, Loss-BWS: 0.000, val-rmse: 31.301, val-SAM: 1.665, val-PSNR: 35.339, val-ERGAS: 2.659, Inference time: 2.549969 ms, Optim time: 297.513097, lr: 0.000051
+S : [epoch: 296] Loss: 0.007, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 32.955, val-SAM: 1.831, val-PSNR: 34.853, val-ERGAS: 2.631, Inference time: 1.642821 ms, Optim time: 131.984198, lr: 0.000051
+ 
+T : [epoch: 298] Loss: 0.007, Loss-SAM: 0.011, Loss-BWS: 0.000, val-rmse: 32.590, val-SAM: 1.761, val-PSNR: 34.608, val-ERGAS: 2.850, Inference time: 2.555010 ms, Optim time: 297.389767, lr: 0.000050
+S : [epoch: 298] Loss: 0.007, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 33.874, val-SAM: 1.877, val-PSNR: 34.489, val-ERGAS: 2.856, Inference time: 1.612418 ms, Optim time: 131.899919, lr: 0.000050
+ 
+T : [epoch: 300] Loss: 0.006, Loss-SAM: 0.011, Loss-BWS: 0.000, val-rmse: 30.688, val-SAM: 1.595, val-PSNR: 35.675, val-ERGAS: 2.406, Inference time: 2.565914 ms, Optim time: 297.788776, lr: 0.000050
+S : [epoch: 300] Loss: 0.007, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 32.690, val-SAM: 1.780, val-PSNR: 34.991, val-ERGAS: 2.481, Inference time: 1.625861 ms, Optim time: 131.966286, lr: 0.000050
+ 
+T : [epoch: 302] Loss: 0.006, Loss-SAM: 0.011, Loss-BWS: 0.000, val-rmse: 34.863, val-SAM: 1.866, val-PSNR: 34.609, val-ERGAS: 2.826, Inference time: 2.583140 ms, Optim time: 297.627491, lr: 0.000049
+S : [epoch: 302] Loss: 0.007, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 33.616, val-SAM: 1.758, val-PSNR: 34.751, val-ERGAS: 2.659, Inference time: 1.637207 ms, Optim time: 131.860157, lr: 0.000049
+ 
+T : [epoch: 304] Loss: 0.007, Loss-SAM: 0.011, Loss-BWS: 0.000, val-rmse: 31.425, val-SAM: 1.642, val-PSNR: 35.239, val-ERGAS: 2.567, Inference time: 2.547108 ms, Optim time: 297.686807, lr: 0.000049
+S : [epoch: 304] Loss: 0.008, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 33.238, val-SAM: 1.818, val-PSNR: 34.759, val-ERGAS: 2.834, Inference time: 1.632347 ms, Optim time: 131.872755, lr: 0.000049
+ 
+T : [epoch: 306] Loss: 0.006, Loss-SAM: 0.011, Loss-BWS: 0.000, val-rmse: 31.090, val-SAM: 1.635, val-PSNR: 35.510, val-ERGAS: 2.346, Inference time: 2.573866 ms, Optim time: 297.669762, lr: 0.000048
+S : [epoch: 306] Loss: 0.007, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 34.716, val-SAM: 1.926, val-PSNR: 33.855, val-ERGAS: 3.622, Inference time: 1.642190 ms, Optim time: 132.016491, lr: 0.000048
+ 
+T : [epoch: 308] Loss: 0.006, Loss-SAM: 0.011, Loss-BWS: 0.000, val-rmse: 31.682, val-SAM: 1.721, val-PSNR: 35.204, val-ERGAS: 2.576, Inference time: 2.517824 ms, Optim time: 297.855497, lr: 0.000048
+S : [epoch: 308] Loss: 0.007, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 31.861, val-SAM: 1.707, val-PSNR: 35.266, val-ERGAS: 2.381, Inference time: 1.608104 ms, Optim time: 131.962303, lr: 0.000048
+ 
+T : [epoch: 310] Loss: 0.006, Loss-SAM: 0.011, Loss-BWS: 0.000, val-rmse: 31.794, val-SAM: 1.636, val-PSNR: 35.309, val-ERGAS: 2.525, Inference time: 2.600832 ms, Optim time: 297.554824, lr: 0.000047
+S : [epoch: 310] Loss: 0.007, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 32.289, val-SAM: 1.759, val-PSNR: 34.910, val-ERGAS: 2.764, Inference time: 1.646372 ms, Optim time: 131.797346, lr: 0.000047
+ 
+T : [epoch: 312] Loss: 0.006, Loss-SAM: 0.011, Loss-BWS: 0.000, val-rmse: 31.701, val-SAM: 1.791, val-PSNR: 35.397, val-ERGAS: 2.514, Inference time: 2.563834 ms, Optim time: 297.741483, lr: 0.000047
+S : [epoch: 312] Loss: 0.007, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 34.366, val-SAM: 1.899, val-PSNR: 34.311, val-ERGAS: 3.072, Inference time: 1.616044 ms, Optim time: 131.986031, lr: 0.000047
+ 
+T : [epoch: 314] Loss: 0.007, Loss-SAM: 0.011, Loss-BWS: 0.000, val-rmse: 30.569, val-SAM: 1.646, val-PSNR: 35.601, val-ERGAS: 2.551, Inference time: 2.546440 ms, Optim time: 297.645611, lr: 0.000046
+S : [epoch: 314] Loss: 0.007, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 32.362, val-SAM: 1.737, val-PSNR: 35.102, val-ERGAS: 2.490, Inference time: 1.640427 ms, Optim time: 131.966383, lr: 0.000046
+ 
+T : [epoch: 316] Loss: 0.006, Loss-SAM: 0.011, Loss-BWS: 0.000, val-rmse: 35.290, val-SAM: 1.944, val-PSNR: 33.758, val-ERGAS: 4.383, Inference time: 2.590181 ms, Optim time: 297.846223, lr: 0.000046
+S : [epoch: 316] Loss: 0.007, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 47.035, val-SAM: 2.976, val-PSNR: 30.832, val-ERGAS: 8.085, Inference time: 1.630545 ms, Optim time: 132.030905, lr: 0.000046
+ 
+T : [epoch: 318] Loss: 0.007, Loss-SAM: 0.011, Loss-BWS: 0.000, val-rmse: 30.177, val-SAM: 1.580, val-PSNR: 35.880, val-ERGAS: 2.234, Inference time: 2.557573 ms, Optim time: 297.675739, lr: 0.000045
+S : [epoch: 318] Loss: 0.007, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 32.926, val-SAM: 1.798, val-PSNR: 34.593, val-ERGAS: 2.684, Inference time: 1.619495 ms, Optim time: 131.979313, lr: 0.000045
+ 
+T : [epoch: 320] Loss: 0.006, Loss-SAM: 0.011, Loss-BWS: 0.000, val-rmse: 30.093, val-SAM: 1.572, val-PSNR: 35.595, val-ERGAS: 2.384, Inference time: 2.629826 ms, Optim time: 297.675895, lr: 0.000045
+S : [epoch: 320] Loss: 0.007, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 31.834, val-SAM: 1.732, val-PSNR: 35.202, val-ERGAS: 2.491, Inference time: 1.641768 ms, Optim time: 131.947630, lr: 0.000045
+ 
+T : [epoch: 322] Loss: 0.006, Loss-SAM: 0.011, Loss-BWS: 0.000, val-rmse: 30.637, val-SAM: 1.644, val-PSNR: 35.511, val-ERGAS: 2.508, Inference time: 2.554806 ms, Optim time: 297.664500, lr: 0.000044
+S : [epoch: 322] Loss: 0.007, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 32.149, val-SAM: 1.707, val-PSNR: 35.038, val-ERGAS: 2.658, Inference time: 1.628289 ms, Optim time: 131.942566, lr: 0.000044
+ 
+T : [epoch: 324] Loss: 0.006, Loss-SAM: 0.011, Loss-BWS: 0.000, val-rmse: 30.123, val-SAM: 1.579, val-PSNR: 35.881, val-ERGAS: 2.298, Inference time: 2.557480 ms, Optim time: 297.543732, lr: 0.000043
+S : [epoch: 324] Loss: 0.007, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 32.982, val-SAM: 1.777, val-PSNR: 34.830, val-ERGAS: 2.638, Inference time: 1.624095 ms, Optim time: 131.893451, lr: 0.000043
+ 
+T : [epoch: 326] Loss: 0.006, Loss-SAM: 0.011, Loss-BWS: 0.000, val-rmse: 31.016, val-SAM: 1.634, val-PSNR: 35.215, val-ERGAS: 2.891, Inference time: 2.583841 ms, Optim time: 297.447463, lr: 0.000043
+S : [epoch: 326] Loss: 0.007, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 32.045, val-SAM: 1.737, val-PSNR: 35.002, val-ERGAS: 2.771, Inference time: 1.655757 ms, Optim time: 131.834731, lr: 0.000043
+ 
+T : [epoch: 328] Loss: 0.006, Loss-SAM: 0.011, Loss-BWS: 0.000, val-rmse: 31.059, val-SAM: 1.653, val-PSNR: 35.458, val-ERGAS: 2.587, Inference time: 2.575407 ms, Optim time: 297.808437, lr: 0.000042
+S : [epoch: 328] Loss: 0.007, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 32.308, val-SAM: 1.682, val-PSNR: 35.207, val-ERGAS: 2.428, Inference time: 1.637241 ms, Optim time: 132.006990, lr: 0.000042
+ 
+T : [epoch: 330] Loss: 0.006, Loss-SAM: 0.011, Loss-BWS: 0.000, val-rmse: 36.133, val-SAM: 1.908, val-PSNR: 33.435, val-ERGAS: 3.870, Inference time: 2.604860 ms, Optim time: 297.825536, lr: 0.000042
+S : [epoch: 330] Loss: 0.007, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 32.991, val-SAM: 1.797, val-PSNR: 34.359, val-ERGAS: 3.229, Inference time: 1.655089 ms, Optim time: 131.871958, lr: 0.000042
+ 
+T : [epoch: 332] Loss: 0.006, Loss-SAM: 0.011, Loss-BWS: 0.000, val-rmse: 30.252, val-SAM: 1.611, val-PSNR: 35.830, val-ERGAS: 2.223, Inference time: 2.532096 ms, Optim time: 297.981171, lr: 0.000041
+S : [epoch: 332] Loss: 0.007, Loss-SAM: 0.011, Loss-BWS: 0.000, val-rmse: 33.350, val-SAM: 1.813, val-PSNR: 34.254, val-ERGAS: 3.154, Inference time: 1.616865 ms, Optim time: 131.961050, lr: 0.000041
+ 
+T : [epoch: 334] Loss: 0.006, Loss-SAM: 0.011, Loss-BWS: 0.000, val-rmse: 29.845, val-SAM: 1.587, val-PSNR: 36.024, val-ERGAS: 2.090, Inference time: 2.568054 ms, Optim time: 297.883610, lr: 0.000041
+S : [epoch: 334] Loss: 0.007, Loss-SAM: 0.011, Loss-BWS: 0.000, val-rmse: 31.727, val-SAM: 1.702, val-PSNR: 35.332, val-ERGAS: 2.368, Inference time: 1.656746 ms, Optim time: 131.922359, lr: 0.000041
+ 
+T : [epoch: 336] Loss: 0.006, Loss-SAM: 0.011, Loss-BWS: 0.000, val-rmse: 33.800, val-SAM: 1.913, val-PSNR: 34.449, val-ERGAS: 3.353, Inference time: 2.537006 ms, Optim time: 297.839725, lr: 0.000040
+S : [epoch: 336] Loss: 0.007, Loss-SAM: 0.012, Loss-BWS: 0.000, val-rmse: 33.697, val-SAM: 1.807, val-PSNR: 34.651, val-ERGAS: 2.943, Inference time: 1.571084 ms, Optim time: 132.064924, lr: 0.000040
+ 
+T : [epoch: 338] Loss: 0.006, Loss-SAM: 0.011, Loss-BWS: 0.000, val-rmse: 29.688, val-SAM: 1.549, val-PSNR: 36.030, val-ERGAS: 2.155, Inference time: 2.605127 ms, Optim time: 297.784378, lr: 0.000040
+S : [epoch: 338] Loss: 0.007, Loss-SAM: 0.011, Loss-BWS: 0.000, val-rmse: 31.285, val-SAM: 1.664, val-PSNR: 35.427, val-ERGAS: 2.379, Inference time: 1.678162 ms, Optim time: 132.017355, lr: 0.000040
+ 
+Force learning rate decay to 7.972139074307828e-06
+Force learning rate decay to 1.5944278148615657e-06
+Force learning rate decay to 3.1888556297231316e-07
+Force learning rate decay to 6.377711259446264e-08
+Force learning rate decay to 1.2755422518892527e-08
+Force learning rate decay to 2.5510845037785052e-09
+Force learning rate decay to 5.10216900755701e-10
+Force learning rate decay to 1.020433801511402e-10
+Force learning rate decay to 2.0408676030228038e-11
+Force learning rate decay to 4.0817352060456074e-12
+Force learning rate decay to 8.163470412091214e-13
+It is unnecessary to optimize anymore...abort the process
+################################################################################
+finish
+
