@@ -1,6 +1,6 @@
 # CSAKD: Knowledge Distillation with Cross Self-Attention for Hyperspectral and Multispectral Image Fusion
 
-The pytorch implementation of "CSAKD: Knowledge Distillation with Cross Self-Attention for Hyperspectral and Multispectral Image Fusion". Submitted to IEEE Transaction on Image Processing (TIP 2024).
+The offical pytorch implementation of "CSAKD: Knowledge Distillation with Cross Self-Attention for Hyperspectral and Multispectral Image Fusion". Submitted to IEEE Transaction on Image Processing (TIP 2024).
 
 ## [[Paper Link (arXiv)]](https://arxiv.org/abs/2404.15781) 
 
