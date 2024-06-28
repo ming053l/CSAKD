@@ -21,7 +21,7 @@ We introduce a novel knowledge distillation (KD) framework for HR-MSI/LR-HSI fus
 
 | Method                | Venue      | PSNR↑  | SAM↓  | RMSE↓  | PSNR↑  | SAM↓  | RMSE↓  | - | - | - | - |
 |-----------------------|------------|--------|-------|--------|--------|-------|--------|---------|---------|----------|---------|
-|            -          |     -      | **4 Bands LR-HSI** |   -    |    -   | **6 Bands LR-HSI** |  -  |  -    |    -     |  **Params**   |  **FLOPs**  |  **Run-time**  |  **Memory**  |
+|            -          |     -      | **4 Bands LR-HSI** |   -    |    -   | **6 Bands LR-HSI** |  -  |  -   |  **Params**   |  **FLOPs**  |  **Run-time**  |  **Memory**  |
 | PZRes-Net\cite{24}    | TIP 2021   | 34.963 | 1.934 | 35.498 | 37.427 | 1.478 | 28.234 | 40.15M  | 5262G   | 0.0141s  | 11059MB |
 | MSSJFL\cite{23}       | HPCC 2021  | 34.966 | 1.792 | 33.636 | 38.006 | 1.390 | 26.893 | 16.33M  | 175.56G | 0.0128s  | **1349M**  |
 | Dual-UNet\cite{25}    | TGRS 2021  | 35.423 | 1.892 | 33.183 | 38.453 | 1.548 | 26.148 | **2.97M**  | **88.65G** | 0.0127s  | 2152M  |
