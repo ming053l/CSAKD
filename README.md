@@ -9,13 +9,12 @@ Advanced Computer Vision LAB, National Cheng Kung University
 Department of Electrial Engineering, National Taiwan Normal University
 
 
-
 ## Overview
 
 We introduce a novel knowledge distillation (KD) framework for HR-MSI/LR-HSI fusion to achieve SR of LR-HSI. Our KD framework integrates the proposed Cross-Layer Residual Aggregation (CLRA) block to enhance efficiency for constructing Dual Two-Streamed (DTS) network structure, designed to extract joint and distinct features from LR-HSI and HR-MSI simultaneously. To fully exploit the spatial and spectral feature representations of LR-HSI and HR-MSI, we propose a novel Cross Self-Attention (CSA) fusion module to adaptively fuse those features to improve the spatial and spectral quality of the reconstructed HR-HSI. Finally, the proposed KD-based joint loss function is employed to co-train the teacher and student networks.
 
-<img src=".\figures\complexity.png" width="700"/>
 <img src=".\figures\network.png" width="800"/>
+<img src=".\figures\complexity.png" width="560"/>
 
 
 ## Environment
