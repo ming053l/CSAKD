@@ -38,7 +38,6 @@ We introduce a novel knowledge distillation (KD) framework for HR-MSI/LR-HSI fus
 
 ## Environment
 
-- [PyTorch >= 1.7](https://pytorch.org/)
 - CUDA >= 11.2
 - python==3.8.18
 - pytorch==1.8.1 
