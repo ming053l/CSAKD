@@ -76,6 +76,15 @@ If our work is helpful to your reaearch, please kindly cite our work. Thank!
 
 #### BibTeX
 
+    @misc{hsu2024csakdknowledgedistillationcross,
+          title={CSAKD: Knowledge Distillation with Cross Self-Attention for Hyperspectral and Multispectral Image Fusion}, 
+          author={Chih-Chung Hsu and Chih-Chien Ni and Chia-Ming Lee and Li-Wei Kang},
+          year={2024},
+          eprint={2406.19666},
+          archivePrefix={arXiv},
+          primaryClass={cs.CV},
+          url={https://arxiv.org/abs/2406.19666}, 
+    }
 
 ## Contact
 If you have any question, please email zuw408421476@gmail.com to discuss with the author.
