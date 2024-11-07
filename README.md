@@ -6,7 +6,7 @@ The offical pytorch implementation of "CSAKD: Knowledge Distillation with Cross 
 
 ## [[AVIRIS Dataset Link (GoogleDrive)]](https://drive.google.com/drive/folders/10ovLQkVHvNzhXDiEnVGZJdvEMUKsC6Mo)
 
-## [[Pre-trained Teacher Model]](https://drive.google.com/drive/folders/1qM5KeAuC44srurE536y8iAbtUH8-x0VR?usp=sharing)  [[Pre-trained Student Model]](https://drive.google.com/drive/folders/1qM5KeAuC44srurE536y8iAbtUH8-x0VR?usp=sharing) 
+## [[Pre-trained Teacher Model]](https://drive.google.com/drive/folders/1bFvXC4pqLviSgIuCNVDb9rBriyzTmKj5?usp=sharing)  [[Pre-trained Student Model]](https://drive.google.com/drive/folders/1qM5KeAuC44srurE536y8iAbtUH8-x0VR?usp=sharing) 
 
 [Chih-Chung Hsu](https://cchsu.info/), Chih-Chien Ni, [Chia-Ming Lee](https://ming053l.github.io/), [Li-Wei Kang](https://scholar.google.com/citations?user=QwSzhgEAAAAJ&hl=zh-TW)
 
